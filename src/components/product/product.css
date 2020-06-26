@@ -1,0 +1,316 @@
+/************** Product *******************/
+.product-page-container {
+  width: 90%;
+  margin: 5% auto 0;
+}
+.product-section-1-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 5.4fr 3.5fr;
+  grid-gap: 5%;
+}
+
+.product-small-images-container {
+  display: grid;
+  /*  grid-template-rows: 1.66fr 1.67fr 1.66fr 1.67fr 1.66fr 1.67fr; */
+  grid-auto-rows: 12.5vh;
+  grid-gap: 0.5em;
+  /*display: flex;
+  flex-direction: column;
+  align-items: center;*/
+}
+.product-image-small {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  /* border: 2px solid transparent; */
+  border: 0px;
+}
+.product-image-item {
+  width: 100%;
+  height: 100%;
+}
+.product-main-image {
+  display: grid;
+  /*  flex-direction: column; */
+  grid-template-rows: 95% 5%;
+}
+.product-image-main {
+  width: 100%;
+  height: 100%;
+  min-height: 75vh;
+  border: 0px;
+  background-position: center;
+  background-size: cover;
+}
+.product-main {
+  width: 100%;
+  height: 100%;
+}
+.image-group {
+  /*display: grid;
+  grid-template-columns: 3fr 7fr;*/
+  display: flex;
+  justify-content: center;
+}
+.flex-item {
+  /* width: 40%;*/
+  height: 100%;
+}
+/* input[type="file"] {
+  display: none;
+}
+label {
+  color: black;
+  height: 5%;
+  width: 10%;
+  background-color: antiquewhite;
+} */
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  /*display: inline-block;*/
+}
+.upload-btn {
+  border: 0.07em solid gray;
+  color: black;
+  background-color: white;
+  padding: 0.5em 0.2em 1em 0.2em;
+  border-radius: 0.5em;
+  font-size: 0.6em;
+  font-weight: bold;
+  width: 100%;
+  margin: 1em auto;
+  display: inline-block;
+  text-align: center;
+}
+.upload-btn-wrapper input[type="file"] {
+  font-size: 1em;
+  padding: 5% 0 5% 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.upload-btn-wrapper-main {
+  position: relative;
+  overflow: hidden;
+  /*display: inline-block;*/
+}
+.upload-btn-main {
+  border: 0.07em solid gray;
+  color: black;
+  background-color: white;
+  padding: 1% 0.2em 1% 0.2em;
+  border-radius: 0.5em;
+  font-size: 0.6em;
+  font-weight: bold;
+  width: 100%;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+}
+.upload-btn-wrapper-main input[type="file"] {
+  font-size: 1em;
+
+  position: absolute;
+  left: 0;
+  top: 96%;
+  display: inline-block;
+  width: 100%;
+  opacity: 0;
+}
+/* .product-main-image input[type="file"] {
+  font-size: 0.6em;
+
+  position: absolute;
+  margin: 1em auto;
+  opacity: 0;
+  
+} */
+.edit-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.edit-field-container {
+  height: 5.5vh;
+  margin: 0;
+  padding: 0;
+}
+.novinka {
+  margin: 20px;
+}
+.product-title-container {
+  display: flex;
+  flex-direction: column;
+}
+.x-button {
+  margin: 10px auto 0;
+  height: 2.5em;
+}
+.title-brand {
+  font-family: "Comfortaa", cursive;
+  font-size: 1.9vw;
+}
+.title-name {
+  font-family: "Cormorant Infant", serif;
+  font-size: 3.5vw;
+  line-height: 2.8vw;
+}
+.title-name1 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 2vw;
+  line-height: 1.8vw;
+}
+.title-name2 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 2vw;
+  line-height: 1.8vw;
+}
+.title-size {
+  font-family: "Lora", serif;
+  font-size: 175%;
+}
+.title-producer {
+  font-family: "Montserrat", sans-serif;
+  font-size: 125%;
+}
+.title-code-tovara {
+  font-family: "Montserrat", sans-serif;
+  font-size: 125%;
+}
+.title-price {
+  margin-top: 2em;
+  font-size: 130%;
+
+  /* font-family: "Cormorant Garamond", serif; */
+  font-family: "Roboto", sans-serif;
+}
+.line-through {
+  text-decoration: line-through;
+}
+.title-discount-price {
+  font-size: 150%;
+  margin-left: 5%;
+  color: red;
+  font-weight: 800;
+  font-family: "Cormorant Garamond", serif;
+}
+/************************************************/
+.collections-title {
+  text-align: center;
+  margin-top: 5%;
+  font-size: 1.5em;
+}
+.collection-List-Container {
+  margin: 2% auto;
+  border: 1px solid gray;
+  width: 60%;
+}
+.collection-title {
+  display: flex;
+  justify-content: space-between;
+  margin: 1% 5% 1% 5%;
+  border-bottom: 1px solid gray;
+}
+.collection-navbar-element:hover {
+  background-color: burlywood;
+}
+/* .collection-navbar-element {
+  color: red;
+} */
+
+.collection-navbar-wrapper {
+  width: 30%;
+  border: 1px solid black;
+  margin: 2% auto;
+  position: relative;
+}
+.collection-submenu-wrapper {
+  margin: 0 auto;
+  border: 1px solid gray;
+  width: 130%;
+  position: absolute;
+  top: -1%;
+  left: -5%;
+  background-color: cornsilk;
+  height: 130%;
+  overflow: scroll;
+}
+.collection-submenu-title {
+  color: brown;
+  font-size: 1.7em;
+  font-weight: bold;
+}
+.collection-submenu-element:hover {
+  background-color: burlywood;
+}
+.submenu-up {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 7%;
+}
+.submenu-middle {
+  font-size: 1.3em;
+  color: darkgreen;
+  font-weight: 800;
+  margin-left: 11%;
+}
+.submenu-down {
+  font-size: 1.1em;
+  color: darkslateblue;
+  font-weight: 600;
+  margin-left: 15%;
+}
+.submenu-html {
+  display: none;
+}
+
+.add-collection-button {
+  display: flex;
+  justify-content: center;
+}
+.buttons-edit-exit {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5vw;
+}
+.colors-container {
+  width: 84%;
+  margin: 1px auto;
+}
+.color-grid-container {
+  width: 80vw;
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr;
+
+  grid-gap: 0.5em;
+}
+.color-item {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  padding: 1px 1px;
+  position: relative;
+  /*  overflow: scroll; */
+}
+.color-image {
+  width: 10vw;
+  height: 15vh;
+  background-position: center;
+  background-size: cover;
+
+  /* border: 2px solid transparent; */
+  border: 0px;
+}
+.table-description {
+  margin-top: 10vw;
+  border-bottom: 1px solid black;
+}
+.buttons-edit-exit {
+  margin-top: 20vw;
+}

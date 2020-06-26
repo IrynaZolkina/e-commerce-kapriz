@@ -1,0 +1,17 @@
+/************** Utilities ******************/
+.btn {
+  border: 1px solid black;
+  border-radius: 50px;
+  padding: 12px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-family: "Bigelow Rules";
+}
+
+.btn-large {
+  width: 200px;
+}
+
+.btn-middle {
+  width: 140px;
+}

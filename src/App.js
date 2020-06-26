@@ -6,6 +6,8 @@ import { createStructuredSelector } from "reselect";
 
 import "./App.css";
 
+import SliderNew from "./pages/homepage/slider-new/SliderNew";
+import Navbar from "./components/navbar-group/navbar/Navbar";
 import HomePage from "./pages/homepage/HomePage";
 import ShopPage from "./pages/shop-page/ShopPage";
 import Header from "./components/header/Header";
@@ -14,6 +16,10 @@ import CheckOutPage from "./pages/checkout-page/CheckOutPage";
 
 import { setCurrentUser } from "./redux/user/userActions";
 import { selectCurrentUser } from "./redux/user/userSelector";
+import CollectionPage from "./pages/collection-page/CollectionPage";
+import ProductPage from "./pages/product-page/ProductPage";
+import NewProduct from "./components/new-product/NewProduct";
+import Slider6in18 from "./components/slider-6-un-18-sec/Slider6in18";
 
 class App extends Component {
   unsubscribeFromAuth = null;
@@ -53,10 +59,26 @@ class App extends Component {
     return (
       <div>
         <Header />
+        <Navbar />
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path="/shop" component={ShopPage} />
+          {/* <Route path="/shop" component={ShopPage} /> */}
           <Route path="/checkout" component={CheckOutPage} />
+          {/* <Route path="/shop/:collectionId" component={ShopPage} /> */}
+
+          <Route
+            path="/collection/product/:productId"
+            component={ProductPage}
+          />
+          <Route exact path="/new" component={NewProduct} />
+          <Route path="/slidernew" component={SliderNew} />
+          {/*  <Route path="/slider6in18" component={Slider6in18} /> */}
+
+          <Route
+            exact
+            path="/collection/:collectionId"
+            component={CollectionPage}
+          />
           <Route
             exact
             path="/signin"

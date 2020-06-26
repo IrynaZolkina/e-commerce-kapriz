@@ -1,15 +1,17 @@
 import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
+import "firebase/storage";
 
 const config = {
-  apiKey: "AIzaSyBob6GeQ0HR5RcAKbNqfZt56jkJnvLURZs",
-  authDomain: "e-commerce-shop-2661d.firebaseapp.com",
-  databaseURL: "https://e-commerce-shop-2661d.firebaseio.com",
-  projectId: "e-commerce-shop-2661d",
-  storageBucket: "e-commerce-shop-2661d.appspot.com",
-  messagingSenderId: "1059108345633",
-  appId: "1:1059108345633:web:c9d10e3c3fff40d14e9060",
+  apiKey: "AIzaSyC_W3ZW4MOhN3GurxjEBoXjUd5TCkNXtRc",
+  authDomain: "justclockit-a0fa1.firebaseapp.com",
+  databaseURL: "https://justclockit-a0fa1.firebaseio.com",
+  projectId: "justclockit-a0fa1",
+  storageBucket: "justclockit-a0fa1.appspot.com",
+  messagingSenderId: "502525191385",
+  appId: "1:502525191385:web:37467ce4ce1b9ba2f80ac8",
+  measurementId: "G-C29LGTRMBD",
 };
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
@@ -42,6 +44,7 @@ firebase.initializeApp(config);
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
+export const storage = firebase.storage();
 
 const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt: "select_account" });

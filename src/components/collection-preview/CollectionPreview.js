@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./collection-preview.styles.scss";
-import CollectionItem from "../collection-item/CollectionItem";
+import CollectionItem from "../../pages/collection-page/collection-item/CollectionItem";
 import { Link, Redirect } from "react-router-dom";
 
 const CollectionPreview = ({ title, items, routeName }) => {

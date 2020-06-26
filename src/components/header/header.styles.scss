@@ -1,25 +1,54 @@
 .header {
-  height: 70px;
+  height: 4.5vw;
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 10% 48% 42%;
+  justify-items: end;
+  /* display: flex;
   justify-content: space-between;
-  margin-bottom: 25px;
+  margin-bottom: 25px; */
 
   .logo-container {
     height: 100%;
-    width: 70px;
-    padding: 25px;
+    width: 7vw;
+    /* padding: 25px; */
+  }
+  .logo-kapriz {
+    content: "";
+    background-position: center;
+    background-size: cover;
+    width: 5vw;
+    height: 6vw;
+    /* padding-left: 5%; */
+    margin-left: 4vw;
+    margin-top: 0.8vw;
+  }
+  .main-title {
+    /* position: absolute; */
+    /*  left: 50%;
+    transform: translateX(-50%); */
+    z-index: 10;
+
+    /* top: -1.6vh; */
+    a {
+      font-size: 6vw;
+      font-family: "Cormorant Infant", serif;
+      color: black;
+      padding: 0;
+      margin: -1vw;
+    }
   }
 
   .options {
-    width: 50%;
-    height: 100%;
+    /* width: 50%;
+    height: 100%; */
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    font-size: 1vw;
 
     .option {
-      padding: 10px 15px;
+      padding: 1vw 0.5vw;
       cursor: pointer;
     }
   }
