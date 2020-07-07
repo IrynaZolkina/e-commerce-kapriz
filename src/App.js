@@ -7,6 +7,7 @@ import { createStructuredSelector } from "reselect";
 import "./App.css";
 
 import SliderNew from "./pages/homepage/slider-new/SliderNew";
+import Sn from "./pages/homepage/slider-new/Sn";
 import Navbar from "./components/navbar-group/navbar/Navbar";
 import HomePage from "./pages/homepage/HomePage";
 import ShopPage from "./pages/shop-page/ShopPage";
@@ -72,6 +73,7 @@ class App extends Component {
           />
           <Route exact path="/new" component={NewProduct} />
           <Route path="/slidernew" component={SliderNew} />
+          <Route path="/sn" component={Sn} />
           {/*  <Route path="/slider6in18" component={Slider6in18} /> */}
 
           <Route

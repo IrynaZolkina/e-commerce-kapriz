@@ -1,0 +1,427 @@
+/****************   Slider-show   *****************/
+
+.container-slider {
+  margin: 2% auto;
+  margin-top: 5%;
+  overflow: hidden;
+
+  .arrow-left {
+    position: absolute;
+    top: 40%;
+    cursor: pointer;
+  }
+  .arrow-right {
+    position: absolute;
+    top: 40%;
+    left: 99.2%;
+    cursor: pointer;
+  }
+}
+.slider {
+  width: 98%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.background-image-sl {
+  cursor: pointer;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.slider figure {
+  position: relative;
+  width: 900%;
+  height: 35rem;
+  margin: 0;
+  left: 0;
+  animation: 40s slider infinite;
+}
+
+.slider figure div {
+  float: left;
+  width: 11.1111111111111%;
+}
+
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  12% {
+    left: 0;
+  }
+  12.5% {
+    left: -100%;
+  }
+  24.5% {
+    left: -100%;
+  }
+  25% {
+    left: -200%;
+  }
+  37% {
+    left: -200%;
+  }
+  37.5% {
+    left: -300%;
+  }
+  49.5% {
+    left: -300%;
+  }
+  50% {
+    left: -400%;
+  }
+  62% {
+    left: -400%;
+  }
+  62.5% {
+    left: -500%;
+  }
+  74.5% {
+    left: -500%;
+  }
+  75% {
+    left: -600%;
+  }
+  87% {
+    left: -600%;
+  }
+  87.5% {
+    left: -700%;
+  }
+  99.5% {
+    left: -700%;
+  }
+  100% {
+    left: -800%;
+  }
+}
+
+.slider1 {
+  overflow: hidden;
+  position: relative;
+  width: 900%;
+  margin: 0;
+  margin-top: 20px;
+  left: 0;
+  z-index: -200;
+  animation: 40s slider infinite;
+}
+.par {
+  float: left;
+  width: 11.1111111111111%;
+  height: 100%;
+  background: white;
+}
+.par1 {
+  font-size: 1.2rem;
+}
+.par2 {
+  font-family: "Comfortaa";
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+}
+
+.control-group {
+  position: absolute;
+  width: 162px;
+  display: flex;
+  justify-content: space-around;
+  left: 75%;
+
+  top: 76%;
+}
+.control-item {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  /* transition: 0.5s; */
+  border: 1px solid black;
+  border-radius: 50%;
+  /* background-color: navajowhite; */
+}
+.active-item {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: black;
+  border-radius: 50%;
+  top: 32%;
+}
+.active-item-1 {
+  left: 4%;
+}
+.active-item-2 {
+  left: 16.5%;
+}
+.active-item-3 {
+  left: 29%;
+}
+.active-item-4 {
+  left: 41.5%;
+}
+.active-item-5 {
+  left: 54%;
+}
+.active-item-6 {
+  left: 66.5%;
+}
+.active-item-7 {
+  left: 79%;
+}
+.active-item-8 {
+  left: 91.5%;
+}
+.active-item-moving {
+  left: 4.5%;
+  animation: 40s radio-button infinite;
+}
+.control-item:hover {
+  background-color: lightgray;
+}
+.control-item-active {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: black;
+  animation: 40s animation-control-items infinite;
+  position: absolute;
+  left: 3.2%;
+  top: 23%;
+}
+
+@keyframes animation-control-items {
+  0% {
+    margin-left: 0%;
+  }
+
+  12.4% {
+    margin-left: 0%;
+  }
+  12.5% {
+    margin-left: 12.5%;
+  }
+  24.5% {
+    margin-left: 12.5%;
+  }
+  25% {
+    margin-left: 25%;
+  }
+  37.49% {
+    margin-left: 25%;
+  }
+  37.5% {
+    margin-left: 37.5%;
+  }
+  49.99% {
+    margin-left: 37.5%;
+  }
+  50% {
+    margin-left: 50%;
+  }
+  62.49% {
+    margin-left: 50%;
+  }
+  62.5% {
+    margin-left: 62.5%;
+  }
+  74.99% {
+    margin-left: 62.5%;
+  }
+  75% {
+    margin-left: 75%;
+  }
+  87.49% {
+    margin-left: 75%;
+  }
+  87.5% {
+    margin-left: 87.5%;
+  }
+  99.99% {
+    margin-left: 87.5%;
+  }
+
+  100% {
+    margin-left: 100%;
+  }
+}
+.control-item-chosen {
+  width: 7px;
+  height: 7px;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: black;
+
+  position: absolute;
+  left: 3.2%;
+  top: 23%;
+}
+.container-one-slide {
+  margin: 2% auto;
+  margin-top: 5%;
+  overflow: hidden;
+
+  .arrow-left {
+    position: absolute;
+    top: 40%;
+    cursor: pointer;
+  }
+  .arrow-right {
+    position: absolute;
+    top: 40%;
+    left: 99.2%;
+    cursor: pointer;
+  }
+  .slide {
+    width: 98%;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .fig-sl {
+    position: relative;
+
+    height: 35rem;
+    width: 100%;
+    /* z-index: -2; */
+    /* margin: 0;
+  left: 0; */
+  }
+  .slide1 {
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    margin-top: 20px;
+    left: 0;
+  }
+  .sl-par {
+    /* float: left;
+    width: 11.1111111111111%; */
+    height: 100%;
+    background: white;
+  }
+  .sl-par1 {
+    font-size: 1.2rem;
+  }
+  .sl-par2 {
+    font-family: "Comfortaa";
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 0.7rem;
+  }
+}
+
+/* 
+#c1:checked ~ .pc1 {
+  margin-left: 0;
+}
+#c2:checked ~ .pc1 {
+  margin-left: -12.5%;
+}
+#c3:checked ~ .pc1 {
+  margin-left: -25%;
+}
+#c4:checked ~ .pc1 {
+  margin-left: -37.5%;
+}
+#c5:checked ~ .pc1 {
+  margin-left: -50%;
+}
+#c6:checked ~ .pc1 {
+  margin-left: -62.5%;
+}
+#c7:checked ~ .pc1 {
+  margin-left: -75%;
+}
+#c8:checked ~ .pc1 {
+  margin-left: -87.5%;
+}
+ */
+
+.fixed-radio {
+  position: relative;
+  left: 70%;
+  top: 10px;
+}
+
+.moving-radio {
+  position: absolute;
+  top: -0.01px;
+  /*  background-color: black; */
+  transform: translateX(100%);
+  animation: 20s radio-button infinite;
+  input[type="radio"] {
+    opacity: 0;
+  }
+  input[type="radio"] + label::before {
+    content: "";
+    position: absolute;
+    left: 37%;
+    top: 34%;
+    width: 7px;
+    height: 7px;
+    background-color: darkgrey;
+    border-radius: 50%;
+  }
+}
+@keyframes radio-button {
+  0% {
+    transform: translateX(0%);
+  }
+  12.49% {
+    transform: translateX(0%);
+  }
+  12.5% {
+    transform: translateX(335%);
+  }
+  24.99% {
+    transform: translateX(335%);
+  }
+  25% {
+    transform: translateX(670%);
+  }
+  37.49% {
+    transform: translateX(670%);
+  }
+  37.5% {
+    transform: translateX(1005%);
+  }
+  49.99% {
+    transform: translateX(1005%);
+  }
+  50% {
+    transform: translateX(1340%);
+  }
+  62.49% {
+    transform: translateX(1340%);
+  }
+  62.5% {
+    transform: translateX(1675%);
+  }
+  74.99% {
+    transform: translateX(1675%);
+  }
+  75% {
+    transform: translateX(2010%);
+  }
+  87.49% {
+    transform: translateX(2010%);
+  }
+  87.5% {
+    transform: translateX(2345%);
+  }
+  99.99% {
+    transform: translateX(2345%);
+  }
+
+  100% {
+    transform: translateX(2680%);
+  }
+}

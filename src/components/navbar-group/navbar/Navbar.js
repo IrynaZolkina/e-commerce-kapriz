@@ -242,10 +242,10 @@ class Navbar extends Component {
           number: "03000000",
           submenuItemsInColumn: {
             first: "17",
-            second: "39",
-            third: "55",
-            forth: "79",
-            fifth: "98",
+            second: "38",
+            third: "54",
+            forth: "78",
+            fifth: "97",
             sixth: "150",
           },
           subMenu: [
@@ -366,12 +366,7 @@ class Navbar extends Component {
               number: "03020100",
               level: "3",
             },
-            {
-              title: "-Сульфатні",
-              code: "000021",
-              number: "03020101",
-              level: "4",
-            },
+
             {
               title: "-Безсульфатні",
               code: "000022",
@@ -1831,42 +1826,272 @@ class Navbar extends Component {
         {
           title: "аксесуари",
           order: "08",
+          code: "000357",
           number: "08000000",
           submenuItemsInColumn: {
-            first: "15",
-            second: "50",
-            third: "75",
-            forth: "90",
+            first: "18",
+            second: "29",
+            third: "58",
+            forth: "71",
             fifth: "115",
             sixth: "130",
           },
           subMenu: [
-            { title: "https/мiнiатюри", number: "000000" },
-            { title: "-вiалки", number: "000000" },
+            {
+              title:
+                "https://firebasestorage.googleapis.com/v0/b/justclockit-a0fa1.appspot.com/o/kapris%2Fnavbar%2Fparfum%2Fphoto_2020-06-29_12-46-58.jpg?alt=media&token=6fed73a6-547f-4dd8-bb98-9b5c1d5a3f44",
+              number: "99999979",
+            },
+            { title: "#Нанесення макіяжу", code: "000358", number: "08010000" },
+            { title: ".Аплікатори", code: "000359", number: "08010100" },
+            { title: ".Пензлики", code: "000360", number: "08010200" },
+            { title: "-Для тіней", code: "000361", number: "08010201" },
+            { title: "-Для брів", code: "000362", number: "08010202" },
+            { title: "-Для вій", code: "000363", number: "08010203" },
+            { title: "-Для підводки", code: "000364", number: "08010204" },
+            {
+              title: "-Для тональних основ",
+              code: "000365",
+              number: "08010205",
+            },
+            { title: "-Для контурінгу", code: "000366", number: "08010206" },
+            {
+              title: "-Для рідких скульпторів",
+              code: "000367",
+              number: "08010207",
+            },
+            { title: "-Для пудри", code: "000368", number: "08010208" },
+            { title: "-Для рум'ян", code: "000369", number: "08010209" },
+            { title: "-Для губ", code: "000370", number: "08010210" },
+            { title: ".Спонжі", code: "000371", number: "08010300" },
+            { title: ".Пуховки для пудри", code: "000372", number: "08010400" },
+            { title: ".Набори пензлів", code: "000373", number: "08010500" },
+            { title: ".Пінцети", code: "000374", number: "08010600" },
+            { title: "#Зняття макіяжу", code: "000375", number: "08020000" },
+            {
+              title: ".Спонжі для демакіяжу",
+              code: "000376",
+              number: "08020100",
+            },
+            {
+              title: ".Серветки для демакіяжу",
+              code: "000377",
+              number: "08020200",
+            },
+
+            { title: "#Накладні вії", code: "000378", number: "08030000" },
+            { title: ".Пучкові вії", code: "000379", number: "08030100" },
+            { title: ".Комплекти вій", code: "000380", number: "08030200" },
+            { title: ".Клей для вій", code: "000381", number: "08030300" },
+            { title: ".Ремувер", code: "000382", number: "08030400" },
+            { title: ".Пінцети", code: "000383", number: "08030500" },
+            { title: ".Інше", code: "000384", number: "08030600" },
+            /* {
+              title:
+                "https://firebasestorage.googleapis.com/v0/b/justclockit-a0fa1.appspot.com/o/kapris%2Fnavbar%2Fparfum%2Fphoto_2020-06-29_12-44-20.jpg?alt=media&token=da503cde-0293-4e43-bb16-0f07d0cfad9f",
+              number: "99999980",
+            }, */
+            {
+              title:
+                "https://firebasestorage.googleapis.com/v0/b/justclockit-a0fa1.appspot.com/o/kapris%2Fnavbar%2Fparfum%2Fphoto_2020-06-29_12-45-14.jpg?alt=media&token=3edb8f9f-473c-4c1e-ad84-dccb5a93babe",
+              number: "99999976",
+            },
+            { title: "#Для волосся", code: "000385", number: "08040000" },
+            { title: ".Для фарбування", code: "000386", number: "08040100" },
+            {
+              title: "-Пензлики для фарбування",
+              code: "000387",
+              number: "08040101",
+            },
+            {
+              title: "-Мисочки та шейкери",
+              code: "000388",
+              number: "08040102",
+            },
+            {
+              title: "-Вінчики та шпателі",
+              code: "000389",
+              number: "08040103",
+            },
+            { title: "-Фартухи", code: "000390", number: "08040104" },
+            { title: "-Коміри", code: "000391", number: "08040105" },
+            { title: "-Пеньюари", code: "000392", number: "08040106" },
+            {
+              title: "-Перукарські зажими",
+              code: "000393",
+              number: "08040107",
+            },
+            { title: "-Фольга", code: "000394", number: "08040108" },
+            { title: "-Гребінці", code: "000395", number: "08040109" },
+            { title: "-Ваги", code: "000396", number: "08040110" },
+            { title: "-Ключики для фарби", code: "000397", number: "08040111" },
+            { title: "-Розпирскувачі", code: "000398", number: "08040112" },
+            { title: "-Рукавички", code: "000399", number: "08040113" },
+            {
+              title: "-Шапочки для мелірування",
+              code: "000400",
+              number: "08040114",
+            },
+            { title: "-Інше", code: "000401", number: "08040115" },
+            { title: ".Бігуді і папілоти", code: "000402", number: "08040200" },
+            { title: ".Краби і зажими", code: "000403", number: "08040300" },
+            {
+              title: ".Резинки та шпильки",
+              code: "000404",
+              number: "08040400",
+            },
+            {
+              title: ".Фени, дифузори, праски",
+              code: "000405",
+              number: "08040500",
+            },
+            {
+              title: ".Ножиці для стрижки",
+              code: "000406",
+              number: "08040600",
+            },
+            { title: ".Щітки і розчіски", code: "000407", number: "08040700" },
+            { title: "-Щітки для укладки", code: "000408", number: "08040701" },
+            { title: "-Масажні щітки", code: "000409", number: "08040702" },
+            { title: "-Гребінці", code: "000410", number: "08040703" },
+            { title: "-Чоловічі", code: "000411", number: "08040704" },
+            { title: "-Дитячі", code: "000412", number: "08040705" },
+            { title: "-Компактні", code: "000413", number: "08040706" },
+            {
+              title: "#Для манікюру та педікюру",
+              code: "000414",
+              number: "08050000",
+            },
+            { title: ".Пилочки", code: "000415", number: "08050100" },
+            { title: ".Кусачки", code: "000416", number: "08050200" },
+            { title: ".Ножиці", code: "000417", number: "08050300" },
+            { title: ".Кніпери", code: "000418", number: "08050400" },
+            { title: ".Лопатки і кюретки", code: "000419", number: "08050500" },
+            { title: ".Дерев'яні палички", code: "000420", number: "08050600" },
+            { title: ".Терки та пемзи", code: "000421", number: "08050700" },
+            { title: ".Щітки", code: "000422", number: "08050800" },
+            {
+              title: ".Набори інструментів",
+              code: "000423",
+              number: "08050900",
+            },
+            {
+              title: ".Чохли для інструментів",
+              code: "000424",
+              number: "08051000",
+            },
+            { title: ".Інше", code: "000425", number: "08051100" },
+            {
+              title:
+                "https://firebasestorage.googleapis.com/v0/b/justclockit-a0fa1.appspot.com/o/kapris%2Fnavbar%2Fparfum%2Fphoto_2020-06-29_12-52-57.jpg?alt=media&token=5823c67d-92a6-4ba1-a90d-d01e54cc0406",
+              number: "99999978",
+            },
+            {
+              title:
+                "https://firebasestorage.googleapis.com/v0/b/justclockit-a0fa1.appspot.com/o/kapris%2Fnavbar%2Fparfum%2Fphoto_2020-06-29_12-51-10.jpg?alt=media&token=0ce026f4-d794-4dc1-a2d9-96bda2360208",
+              number: "99999977",
+            },
+            {
+              title: "#Для косметичних процедур",
+              code: "000426",
+              number: "08060000",
+            },
+            {
+              title: ".Косметологічні інструменти",
+              code: "000427",
+              number: "08060100",
+            },
+            {
+              title: ".Пензлики для нанесення масок",
+              code: "000428",
+              number: "08060200",
+            },
+            {
+              title: ".Миски та набори для масок",
+              code: "000429",
+              number: "08060300",
+            },
+            {
+              title: ".Спонжі для вмивання",
+              code: "000430",
+              number: "08060400",
+            },
+            { title: "#Депіляція", code: "000431", number: "08070000" },
+            { title: "#Мочалки", code: "000432", number: "08080000" },
+            { title: "#Дзеркала", code: "000433", number: "08090000" },
+            { title: "#Косметички", code: "000434", number: "08100000" },
+            { title: "#Чоловікам", code: "000435", number: "08110000" },
+            { title: "#Дітям", code: "000436", number: "08120000" },
           ],
         },
         //********* */  "подарунки",
         {
           title: "подарунки",
           order: "09",
+          code: "000437",
           number: "09000000",
           submenuItemsInColumn: {
-            first: "15",
-            second: "50",
-            third: "75",
-            forth: "90",
-            fifth: "115",
-            sixth: "130",
+            first: "1",
+            second: "5",
+            third: "6",
+            forth: "10",
+            fifth: "11",
+            sixth: "",
           },
-          subMenu: [],
+          subMenu: [
+            {
+              title:
+                "https://firebasestorage.googleapis.com/v0/b/justclockit-a0fa1.appspot.com/o/kapris%2Fnavbar%2Fparfum%2Fphoto_2020-06-29_13-10-47.jpg?alt=media&token=a84fe46f-1a84-451f-b57f-9af42fdaad92",
+              number: "99999975",
+            },
+            { title: ".Парфумерні набори", code: "000438", number: "09000100" },
+
+            {
+              title: ".Набори декоративної косметики",
+              code: "000439",
+              number: "09000200",
+            },
+
+            { title: ".Манікюрні набори", code: "000440", number: "09000300" },
+
+            {
+              title: ".Подарункові сертифікати",
+              code: "000441",
+              number: "09000400",
+            },
+            {
+              title:
+                "https://firebasestorage.googleapis.com/v0/b/justclockit-a0fa1.appspot.com/o/kapris%2Fnavbar%2Fparfum%2Fphoto_2020-06-29_13-01-33.jpg?alt=media&token=54082e2a-c93f-4cea-a119-e3a284bbc072",
+              number: "99999974",
+            },
+            {
+              title: ".Догляд за волоссям",
+              code: "000442",
+              number: "09000500",
+            },
+
+            {
+              title: ".Догляд за обличчям",
+              code: "000443",
+              number: "09000600",
+            },
+
+            { title: ".Чоловікам", code: "000444", number: "09000700" },
+            { title: ".Дітям", code: "000445", number: "09000800" },
+            {
+              title:
+                "https://firebasestorage.googleapis.com/v0/b/justclockit-a0fa1.appspot.com/o/kapris%2Fnavbar%2Fparfum%2Fphoto_2020-06-29_13-13-25.jpg?alt=media&token=d6334ea5-8b31-4b6b-943e-caf91b0122e6",
+              number: "99999973",
+            },
+          ],
         },
       ],
     };
   }
 
   /*  last
-      code: "000356",
-      number: "99999981",*/
+      code: "000445",
+      number: "99999973",*/
   /* 
   componentDidMount() {
     const { navbarMenuTest } = this.state;
@@ -1912,11 +2137,22 @@ class Navbar extends Component {
                   >
                     {element.title.toUpperCase()}
                   </NavLink>
+
                   {this.state.showSubmenu && (
-                    <Submenu
-                      navbarSubMenu={element.subMenu}
-                      submenuItemsInColumn={element.submenuItemsInColumn}
-                    />
+                    <div className="nav-area1">
+                      <div className="main-menu2">
+                        <div>
+                          <div>
+                            <Submenu
+                              navbarSubMenu={element.subMenu}
+                              submenuItemsInColumn={
+                                element.submenuItemsInColumn
+                              }
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   )}
                 </li>
               );

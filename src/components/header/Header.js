@@ -41,10 +41,13 @@ const Header = ({ currentUser, hidden }) => {
             New Product
           </Link>
         )} */}
+        <Link className="option" to="/sn">
+          SN
+        </Link>
 
-        {/* <Link className="option" to="/slidernew">
+        <Link className="option" to="/slidernew">
           SliderNew
-        </Link> */}
+        </Link>
         {/*  <Link className="option" to="/slider6in18">
           SliderNew
         </Link> */}

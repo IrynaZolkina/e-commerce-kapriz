@@ -16,6 +16,11 @@ import FormInputSmall from "../form-input-small/FormInputSmall";
 import { withRouter } from "react-router-dom";
 import { exists } from "fs";
 import Slider3in8 from "../slider-3-un-8-sec/Slider3in8";
+
+import { connect } from "react-redux";
+import { addItem } from "../../redux/cart/cartActions";
+import CustomButtonAdopted from "../custom-button-adopted/CustomButtonAdopted";
+import Slider6in18 from "../slider-6-un-18-sec/Slider6in18";
 //import { storage } from "firebase";
 //import { storage } from "firebase";
 
@@ -30,6 +35,8 @@ class Product extends Component {
     codeTovara: "",
     shortDescription: "",
     description: "",
+    content: "",
+    applying: "",
     collectionsArray: [],
     imageUrl1: "",
     imageUrl2: "",
@@ -67,6 +74,7 @@ class Product extends Component {
     codeTovaraInput: "",
     mainImageUrl: "",
     editMode: false,
+    descriptionForShow: "",
   };
 
   unsubscribe = null;
@@ -118,6 +126,7 @@ class Product extends Component {
           const priceInput = item.price;
           const discountPriceInput = item.discountPrice;
           const codeTovaraInput = item.codeTovara;
+          const description = item.description;
 
           const string11 = titleCode.substring(0, 2);
           const string111 = title.substring(0, string11);
@@ -192,6 +201,7 @@ class Product extends Component {
           this.setState({ priceInput: priceInput });
           this.setState({ discountPriceInput: discountPriceInput });
           this.setState({ codeTovaraInput: codeTovaraInput });
+          this.setState({ descriptionForShow: description });
         }
       });
   };
@@ -409,6 +419,18 @@ class Product extends Component {
       );
     });
   };
+  submitDescription = () => {
+    console.log(this.state);
+    firestore.collection("items").doc(this.props.id).set(
+      {
+        description: this.state.description,
+        applying: this.state.applying,
+        content: this.state.content,
+      },
+      { merge: true }
+    );
+  };
+
   handleChangeColor = (e) => {
     const { value, index } = e.target;
     //console.log(name, "***", value);
@@ -618,6 +640,8 @@ class Product extends Component {
       titleCode,
       codeTovara,
       description,
+      content,
+      applying,
       createdAt,
       shortDescription,
       collectionsArray,
@@ -652,7 +676,9 @@ class Product extends Component {
       codeTovaraInput,
       mainImageUrl,
       editMode,
+      descriptionForShow,
     } = this.state;
+
     const item = this.state.item;
 
     //: title
@@ -759,12 +785,12 @@ class Product extends Component {
               <div className="title-code-tovara">{codeTovara}</div>
               <div
                 className={`${
-                  discountPrice !== "" ? "line-through" : ""
+                  discountPrice !== 0 ? "line-through" : ""
                 } title-price`}
               >
                 {price} грн.
               </div>
-              {discountPrice && (
+              {discountPrice !== 0 && (
                 <div>
                   {" "}
                   <div className="title-discount-price">
@@ -779,7 +805,14 @@ class Product extends Component {
                   </div>
                 </div>
               )}
-
+              <div className="button-collection-items">
+                <CustomButtonAdopted
+                  onClick={() => this.props.addItem(item)}
+                  inverted
+                >
+                  В КОШИК
+                </CustomButtonAdopted>
+              </div>
               {editMode === true && (
                 <div className="edit-group">
                   {/*********   name="title1"   ************/}
@@ -864,7 +897,8 @@ class Product extends Component {
                   {/*********   name="price"   ************/}
                   <div className="edit-field-container">
                     <FormInputSmall
-                      type="text"
+                      type="number"
+                      step=".01"
                       name="priceInput"
                       value={priceInput}
                       label="Цена"
@@ -874,7 +908,8 @@ class Product extends Component {
                   {/*********   name="discountPrice"*******/}
                   <div className="edit-field-container">
                     <FormInputSmall
-                      type="text"
+                      type="number"
+                      step=".01"
                       name="discountPriceInput"
                       value={discountPriceInput}
                       label="Цена со скидкой"
@@ -917,45 +952,41 @@ class Product extends Component {
           </div>
 
           {/*********   name="palitra"   ************/}
-          {palitra && console.log(palitra)}
-          <div className="colors-container">
-            <div className="color-grid-container">
-              {palitra.map((element, index) => (
-                <div key={index} className="color-item">
-                  {element.numberImageUrl === "" ? (
-                    <input
-                      type="file"
-                      name={element.number}
-                      placeholder="file"
-                      onChange={this.handleImageColor}
-                    />
-                  ) : (
-                    <div
-                      className="color-image"
-                      style={{
-                        backgroundImage: `url(${element.numberImageUrl})`,
-                      }}
-                      alt=""
-                    />
-                  )}
+          {palitra && (
+            <div className="colors-container">
+              <div className="color-grid-container">
+                {palitra.map((element, index) => (
+                  <div key={index} className="color-item">
+                    {element.numberImageUrl === "" ? (
+                      <input
+                        type="file"
+                        name={element.number}
+                        placeholder="file"
+                        onChange={this.handleImageColor}
+                      />
+                    ) : (
+                      <div
+                        className="color-image"
+                        style={{
+                          backgroundImage: `url(${element.numberImageUrl})`,
+                        }}
+                        alt=""
+                      />
+                    )}
 
-                  <div className="color-number">{element.number}</div>
-                  <div className="color-number">{element.numberTitle}</div>
-                  <div>
-                    <button onClick={() => this.handleDeleteColor(index)}>
-                      Delete
-                    </button>{" "}
-                    {/**/}
+                    <div className="color-number">{element.number}</div>
+                    <div className="color-number">{element.numberTitle}</div>
+                    <div>
+                      <button onClick={() => this.handleDeleteColor(index)}>
+                        Delete
+                      </button>{" "}
+                      {/**/}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-
-          <div className="description-block">
-            <div className="table-description">Description</div>
-          </div>
-          <Slider3in8 />
+          )}
           {editMode === true ? (
             <div className="edit-field-container">
               <FormInputSmall
@@ -981,6 +1012,88 @@ class Product extends Component {
               </button>
             </div>
           ) : null}
+          <div className="description-input">
+            {description && (
+              <div
+                onClick={() => {
+                  this.setState({ descriptionForShow: description });
+                }}
+                className="table-description"
+              >
+                Описание
+              </div>
+            )}
+            {applying && (
+              <div
+                onClick={() => {
+                  this.setState({ descriptionForShow: applying });
+                }}
+                className="table-description"
+              >
+                Применение
+              </div>
+            )}
+            {content && (
+              <div
+                onClick={() => {
+                  this.setState({ descriptionForShow: content });
+                }}
+                className="table-description"
+              >
+                Состав
+              </div>
+            )}
+          </div>
+
+          {description && (
+            <div className="table-description">{descriptionForShow}</div>
+          )}
+
+          {editMode === true ? (
+            <div className="">
+              {/* <label>Full Description</label> */}
+              <div className="text-area-description">Описание</div>
+              <textarea
+                rows="12"
+                cols="150"
+                className=""
+                id="description"
+                name="description"
+                value={description}
+                onChange={(e) =>
+                  this.setState({ description: e.currentTarget.value })
+                }
+              ></textarea>
+
+              <div className="table-description">Применение</div>
+              <textarea
+                rows="12"
+                cols="150"
+                className=""
+                id="applying"
+                name="applying"
+                value={applying}
+                onChange={(e) =>
+                  this.setState({ applying: e.currentTarget.value })
+                }
+              ></textarea>
+              <div className="table-description">Состав</div>
+              <textarea
+                rows="12"
+                cols="150"
+                className=""
+                id="content"
+                name="content"
+                value={content}
+                onChange={(e) =>
+                  this.setState({ content: e.currentTarget.value })
+                }
+              ></textarea>
+              <button onClick={this.submitDescription}> Сохранить</button>
+            </div>
+          ) : null}
+          {/* <Slider6in18 /> */}
+
           {editMode === true ? (
             <div>
               <Collections
@@ -1024,4 +1137,8 @@ class Product extends Component {
   }
 }
 
-export default withRouter(Product);
+const mapDispatchToProps = (dispatch) => ({
+  addItem: (item) => dispatch(addItem(item)),
+});
+
+export default withRouter(connect(null, mapDispatchToProps)(Product));

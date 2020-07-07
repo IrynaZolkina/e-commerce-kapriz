@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./slider6in18.css";
+import "./slider6in18.scss";
 import TopUnit from "./top-unit/TopUnit";
 
 class Slider6in18 extends Component {
@@ -45,15 +45,14 @@ class Slider6in18 extends Component {
             linkUrl: "shop/sneakers",
             size: "s-img",
           },
-        ],
-        section2: [
+
           {
             title: "Schwarzkopf Bonacure pH 4.5 Color Freeze Silver Shampoo",
             description: "Шампунь придающий серебристый оттенок волосам ",
             imageUrl:
               "https://firebasestorage.googleapis.com/v0/b/cat2-ac7df.appspot.com/o/kapris%2Ftop-sales%2Ftop-sales-04.jpg?alt=media&token=1a152ae2-4759-40ce-85b1-7fb3e0f8ab06",
             //imageUrl: "images/homepage-images/hp1.png",
-            id: 1,
+            id: 4,
             linkUrl: "shop/hats",
             size: "xxxl-img",
           },
@@ -64,7 +63,7 @@ class Slider6in18 extends Component {
             imageUrl:
               "https://firebasestorage.googleapis.com/v0/b/cat2-ac7df.appspot.com/o/kapris%2Ftop-sales%2Ftop-sales-05.jpg?alt=media&token=c28e60a3-66d4-4ba3-a3ee-c94cc23b1f4f",
             //imageUrl: "images/homepage-images/img18.jpg",
-            id: 2,
+            id: 5,
             linkUrl: "shop/jackets",
             size: "xl-img",
           },
@@ -75,12 +74,12 @@ class Slider6in18 extends Component {
             imageUrl:
               "https://firebasestorage.googleapis.com/v0/b/cat2-ac7df.appspot.com/o/kapris%2Ftop-sales%2Ftop-sales-06.jpg?alt=media&token=386d19c6-9630-43e1-ae7a-3e6e70ae669d",
             //imageUrl: "images/homepage-images/img17.jpg",
-            id: 3,
+            id: 6,
             linkUrl: "shop/sneakers",
             size: "s-img",
           },
         ],
-        section3: [
+        section2: [
           {
             title: "Schwarzkopf Professional BONACURE Moisture",
             description:
@@ -115,8 +114,7 @@ class Slider6in18 extends Component {
             linkUrl: "shop/sneakers",
             size: "s-img",
           },
-        ],
-        section4: [
+
           {
             title:
               "ESTEL KERATIN комплекс для догляду за пошкодженим волоссям з кератином",
@@ -125,7 +123,7 @@ class Slider6in18 extends Component {
             imageUrl:
               "https://firebasestorage.googleapis.com/v0/b/cat2-ac7df.appspot.com/o/kapris%2Ftop-sales%2Ftop-sales-10.jpg?alt=media&token=c19e8aac-89da-4bfb-92b4-a993fd2f50de",
             //imageUrl: "images/homepage-images/hp1.png",
-            id: 1,
+            id: 4,
             linkUrl: "shop/hats",
             size: "xxxl-img",
           },
@@ -136,7 +134,7 @@ class Slider6in18 extends Component {
             imageUrl:
               "https://firebasestorage.googleapis.com/v0/b/cat2-ac7df.appspot.com/o/kapris%2Ftop-sales%2Ftop-sales-11.jpg?alt=media&token=3497aab2-a7ed-47f9-9075-e5185cb2f739",
             //imageUrl: "images/homepage-images/img18.jpg",
-            id: 2,
+            id: 5,
             linkUrl: "shop/jackets",
             size: "xl-img",
           },
@@ -147,12 +145,12 @@ class Slider6in18 extends Component {
             imageUrl:
               "https://firebasestorage.googleapis.com/v0/b/cat2-ac7df.appspot.com/o/kapris%2Ftop-sales%2Ftop-sales-12.jpg?alt=media&token=a13101b8-305b-4d7b-90ec-a477e917be85",
             //imageUrl: "images/homepage-images/img17.jpg",
-            id: 3,
+            id: 6,
             linkUrl: "shop/sneakers",
             size: "s-img",
           },
         ],
-        section5: [
+        section3: [
           {
             title:
               "Schwarzkopf Igora Royal и Igora Royal Absolute (для сивини) ",
@@ -186,8 +184,7 @@ class Slider6in18 extends Component {
             linkUrl: "shop/sneakers",
             size: "s-img",
           },
-        ],
-        section6: [
+
           {
             title: "Staleks",
             description:
@@ -195,7 +192,7 @@ class Slider6in18 extends Component {
             imageUrl:
               "https://firebasestorage.googleapis.com/v0/b/cat2-ac7df.appspot.com/o/kapris%2Ftop-sales%2Ftop-sales-16.jpg?alt=media&token=3e2d1380-6f9c-4414-8d21-f48ec0f0ef4b",
 
-            id: 1,
+            id: 4,
             linkUrl: "shop/hats",
             size: "xxxl-img",
           },
@@ -206,7 +203,7 @@ class Slider6in18 extends Component {
             imageUrl:
               "https://firebasestorage.googleapis.com/v0/b/cat2-ac7df.appspot.com/o/kapris%2Ftop-sales%2Ftop-sales-17.jpg?alt=media&token=420b1a6a-8c01-47f4-a6ae-4a5c9ab12b5e",
 
-            id: 2,
+            id: 5,
             linkUrl: "shop/jackets",
             size: "xl-img",
           },
@@ -217,12 +214,12 @@ class Slider6in18 extends Component {
             imageUrl:
               "https://firebasestorage.googleapis.com/v0/b/cat2-ac7df.appspot.com/o/kapris%2Ftop-sales%2Ftop-sales-18.jpg?alt=media&token=d0d8a72d-b870-4d9f-b7cd-cb0417bfe379",
 
-            id: 3,
+            id: 6,
             linkUrl: "shop/sneakers",
             size: "s-img",
           },
         ],
-        section7: [
+        section4: [
           {
             title: "Bourjois 123 Perfection (Буржуа 123 Перфект)",
             description:
@@ -255,15 +252,14 @@ class Slider6in18 extends Component {
             linkUrl: "shop/sneakers",
             size: "s-img",
           },
-        ],
-        section8: [
+
           {
             title: "Versace Man Eau Fraiche 50ml",
             description: "",
             imageUrl:
               "https://firebasestorage.googleapis.com/v0/b/cat2-ac7df.appspot.com/o/kapris%2Ftop-sales%2Ftop-sales-22.jpg?alt=media&token=69c69d39-558c-4a84-bcda-b7bed0f76a75",
 
-            id: 1,
+            id: 4,
             linkUrl: "shop/hats",
             size: "xxxl-img",
           },
@@ -273,7 +269,7 @@ class Slider6in18 extends Component {
             imageUrl:
               "https://firebasestorage.googleapis.com/v0/b/cat2-ac7df.appspot.com/o/kapris%2Ftop-sales%2Ftop-sales-23.jpg?alt=media&token=4d80ff9c-4fd6-4b7f-88f0-96000dc7db6a",
 
-            id: 2,
+            id: 5,
             linkUrl: "shop/jackets",
             size: "xl-img",
           },
@@ -283,7 +279,7 @@ class Slider6in18 extends Component {
             imageUrl:
               "https://firebasestorage.googleapis.com/v0/b/cat2-ac7df.appspot.com/o/kapris%2Ftop-sales%2Ftop-sales-24.jpg?alt=media&token=ffb4d6d7-e6b6-4d3a-aeb0-084b0d190bfe",
 
-            id: 3,
+            id: 6,
             linkUrl: "shop/sneakers",
             size: "s-img",
           },
@@ -296,15 +292,11 @@ class Slider6in18 extends Component {
     const { section2 } = this.state.sect3items;
     const { section3 } = this.state.sect3items;
     const { section4 } = this.state.sect3items;
-    const { section5 } = this.state.sect3items;
-    const { section6 } = this.state.sect3items;
-    const { section7 } = this.state.sect3items;
-    const { section8 } = this.state.sect3items;
 
     if (!this.state.slideChosen) {
       return (
         <div className="grey-fon">
-          <div className="container-slider-topsales">
+          <div className="container-slider-topsales-6">
             <div className="title-slider-8">{this.props.sliderName}</div>
             <div className="slider-top">
               <div className="figure">
@@ -364,62 +356,6 @@ class Slider6in18 extends Component {
                     })}
                   </div>
                 </div>
-                <div className="background-image-sl-top">
-                  <div className="temp-3">
-                    {section5.map((element, index) => {
-                      return (
-                        <TopUnit
-                          key={element.id}
-                          imageUrl={element.imageUrl}
-                          title={element.title}
-                          description={element.description}
-                        />
-                      );
-                    })}
-                  </div>
-                </div>
-                <div className="background-image-sl-top">
-                  <div className="temp-3">
-                    {section6.map((element, index) => {
-                      return (
-                        <TopUnit
-                          key={element.id}
-                          imageUrl={element.imageUrl}
-                          title={element.title}
-                          description={element.description}
-                        />
-                      );
-                    })}
-                  </div>
-                </div>
-                <div className="background-image-sl-top">
-                  <div className="temp-3">
-                    {section7.map((element, index) => {
-                      return (
-                        <TopUnit
-                          key={element.id}
-                          imageUrl={element.imageUrl}
-                          title={element.title}
-                          description={element.description}
-                        />
-                      );
-                    })}
-                  </div>
-                </div>
-                <div className="background-image-sl-top">
-                  <div className="temp-3">
-                    {section8.map((element, index) => {
-                      return (
-                        <TopUnit
-                          key={element.id}
-                          imageUrl={element.imageUrl}
-                          title={element.title}
-                          description={element.description}
-                        />
-                      );
-                    })}
-                  </div>
-                </div>
 
                 <div className="background-image-sl-top">
                   <div className="temp-3">
@@ -440,13 +376,13 @@ class Slider6in18 extends Component {
 
             <div className="nnn">
               <input
-                type="radio"
                 onChange={() =>
                   this.setState({
                     slideChosen: true,
                     sectionChosen: "section1",
                   })
                 }
+                type="radio"
                 value="true"
               />
               <input
@@ -476,49 +412,14 @@ class Slider6in18 extends Component {
                 }
                 type="radio"
               />
-              <input
-                onChange={() =>
-                  this.setState({
-                    slideChosen: true,
-                    sectionChosen: "section5",
-                  })
-                }
-                type="radio"
-              />
-              <input
-                onChange={() =>
-                  this.setState({
-                    slideChosen: true,
-                    sectionChosen: "section6",
-                  })
-                }
-                type="radio"
-              />
-              <input
-                type="radio"
-                onChange={() =>
-                  this.setState({
-                    slideChosen: true,
-                    sectionChosen: "section7",
-                  })
-                }
-              />
-              <input
-                type="radio"
-                onChange={() =>
-                  this.setState({
-                    slideChosen: true,
-                    sectionChosen: "section8",
-                  })
-                }
-              />
+
               <div className="nnn2">
                 <input
-                  value="true"
                   onChange={() => {
                     return null;
                   }}
                   type="radio"
+                  value="true"
                   checked
                 />
               </div>
@@ -551,14 +452,14 @@ class Slider6in18 extends Component {
 
                 <div className="nnn">
                   <input
-                    value="true"
-                    type="radio"
                     onChange={() =>
                       this.setState({
                         slideChosen: true,
                         sectionChosen: "section1",
                       })
                     }
+                    value="true"
+                    type="radio"
                     checked
                   />
                   <input
@@ -568,67 +469,28 @@ class Slider6in18 extends Component {
                         sectionChosen: "section2",
                       })
                     }
-                    value="true"
                     type="radio"
+                    value="true"
                   />
                   <input
-                    type="radio"
                     onChange={() =>
                       this.setState({
                         slideChosen: true,
                         sectionChosen: "section3",
                       })
                     }
+                    value="true"
+                    type="radio"
                   />
 
                   <input
-                    type="radio"
                     onChange={() =>
                       this.setState({
                         slideChosen: true,
                         sectionChosen: "section4",
                       })
                     }
-                    value="true"
-                  />
-                  <input
                     type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section5",
-                      })
-                    }
-                    value="true"
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section6",
-                      })
-                    }
-                    value="true"
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section7",
-                      })
-                    }
-                    value="true"
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section8",
-                      })
-                    }
                     value="true"
                   />
                 </div>
@@ -659,13 +521,14 @@ class Slider6in18 extends Component {
 
                 <div className="nnn">
                   <input
-                    type="radio"
                     onChange={() =>
                       this.setState({
                         slideChosen: true,
                         sectionChosen: "section1",
                       })
                     }
+                    type="radio"
+                    value="true"
                   />
                   <input
                     onChange={() =>
@@ -675,61 +538,28 @@ class Slider6in18 extends Component {
                       })
                     }
                     type="radio"
+                    value="true"
                     checked
                   />
                   <input
-                    type="radio"
                     onChange={() =>
                       this.setState({
                         slideChosen: true,
                         sectionChosen: "section3",
                       })
                     }
+                    type="radio"
+                    value="true"
                   />
                   <input
-                    type="radio"
                     onChange={() =>
                       this.setState({
                         slideChosen: true,
                         sectionChosen: "section4",
                       })
                     }
-                  />
-                  <input
                     type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section5",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section6",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section7",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section8",
-                      })
-                    }
+                    value="true"
                   />
                 </div>
               </div>
@@ -759,6 +589,7 @@ class Slider6in18 extends Component {
                 <div className="nnn">
                   <input
                     type="radio"
+                    value="true"
                     onChange={() =>
                       this.setState({
                         slideChosen: true,
@@ -774,9 +605,11 @@ class Slider6in18 extends Component {
                       })
                     }
                     type="radio"
+                    value="true"
                   />
                   <input
                     type="radio"
+                    value="true"
                     onChange={() =>
                       this.setState({
                         slideChosen: true,
@@ -787,46 +620,11 @@ class Slider6in18 extends Component {
                   />
                   <input
                     type="radio"
+                    value="true"
                     onChange={() =>
                       this.setState({
                         slideChosen: true,
                         sectionChosen: "section4",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section5",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section6",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section7",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section8",
                       })
                     }
                   />
@@ -896,454 +694,11 @@ class Slider6in18 extends Component {
                     }
                     checked
                   />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section5",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section6",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section7",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section8",
-                      })
-                    }
-                  />
                 </div>
               </div>
             </div>
           );
-        case "section5":
-          return (
-            <div className="grey-fon">
-              {/*  <div className="container-slider-topsales"> */}
-              <div className="container-one-image">
-                <div className="slider-one">
-                  <div className="background-image-sl-top">
-                    <div className="temp-3">
-                      {section5.map((element, index) => {
-                        return (
-                          <TopUnit
-                            key={element.id}
-                            imageUrl={element.imageUrl}
-                            title={element.title}
-                            description={element.description}
-                          />
-                        );
-                      })}
-                    </div>
-                  </div>
-                </div>
-                <div className="nnn">
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section1",
-                      })
-                    }
-                  />
-                  <input
-                    value="st"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section2",
-                      })
-                    }
-                    type="radio"
-                  />
-                  <input
-                    type="radio"
-                    value="st1"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section3",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    value="st2"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section4",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section5",
-                      })
-                    }
-                    checked
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section6",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section7",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section8",
-                      })
-                    }
-                  />
-                </div>
-              </div>
-            </div>
-          );
-        case "section6":
-          return (
-            <div className="grey-fon">
-              {/*  <div className="container-slider-topsales"> */}
-              <div className="container-one-image">
-                <div className="slider-one">
-                  <div className="background-image-sl-top">
-                    <div className="temp-3">
-                      {section6.map((element, index) => {
-                        return (
-                          <TopUnit
-                            key={element.id}
-                            imageUrl={element.imageUrl}
-                            title={element.title}
-                            description={element.description}
-                          />
-                        );
-                      })}
-                    </div>
-                  </div>
-                </div>
-                <div className="nnn">
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section1",
-                      })
-                    }
-                  />
-                  <input
-                    value="st"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section2",
-                      })
-                    }
-                    type="radio"
-                  />
-                  <input
-                    type="radio"
-                    value="st1"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section3",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    value="st2"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section4",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section5",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section6",
-                      })
-                    }
-                    checked
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section7",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section8",
-                      })
-                    }
-                  />
-                </div>
-              </div>
-            </div>
-          );
-        case "section7":
-          return (
-            <div className="grey-fon">
-              {/*  <div className="container-slider-topsales"> */}
-              <div className="container-one-image">
-                <div className="slider-one">
-                  <div className="background-image-sl-top">
-                    <div className="temp-3">
-                      {section7.map((element, index) => {
-                        return (
-                          <TopUnit
-                            key={element.id}
-                            imageUrl={element.imageUrl}
-                            title={element.title}
-                            description={element.description}
-                          />
-                        );
-                      })}
-                    </div>
-                  </div>
-                </div>
-                <div className="nnn">
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section1",
-                      })
-                    }
-                  />
-                  <input
-                    value="st"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section2",
-                      })
-                    }
-                    type="radio"
-                  />
-                  <input
-                    type="radio"
-                    value="st1"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section3",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    value="st2"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section4",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section5",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section6",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section7",
-                      })
-                    }
-                    checked
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section8",
-                      })
-                    }
-                  />
-                </div>
-              </div>
-            </div>
-          );
-        case "section8":
-          return (
-            <div className="grey-fon">
-              {/*  <div className="container-slider-topsales"> */}
-              <div className="container-one-image">
-                <div className="slider-one">
-                  <div className="background-image-sl-top">
-                    <div className="temp-3">
-                      {section8.map((element, index) => {
-                        return (
-                          <TopUnit
-                            key={element.id}
-                            imageUrl={element.imageUrl}
-                            title={element.title}
-                            description={element.description}
-                          />
-                        );
-                      })}
-                    </div>
-                  </div>
-                </div>
-                <div className="nnn">
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section1",
-                      })
-                    }
-                  />
-                  <input
-                    value="st"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section2",
-                      })
-                    }
-                    type="radio"
-                  />
-                  <input
-                    type="radio"
-                    value="st1"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section3",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    value="st2"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section4",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section5",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section6",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section7",
-                      })
-                    }
-                  />
-                  <input
-                    type="radio"
-                    onChange={() =>
-                      this.setState({
-                        slideChosen: true,
-                        sectionChosen: "section8",
-                      })
-                    }
-                    checked
-                  />
-                </div>
-              </div>
-            </div>
-          );
+
         default:
           console.log("hello");
           return null;

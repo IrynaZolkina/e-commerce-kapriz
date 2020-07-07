@@ -125,7 +125,7 @@ const CollectionItem = ({ item, addItem }) => {
                 </div>
                 <div className="slide ">
                   <div
-                    className="background-image"
+                    className="background-image-1"
                     style={{
                       backgroundImage: `url(${imageUrl2})`,
                     }}

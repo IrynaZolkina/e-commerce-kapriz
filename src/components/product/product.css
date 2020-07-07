@@ -307,9 +307,21 @@ label {
   /* border: 2px solid transparent; */
   border: 0px;
 }
-.table-description {
-  margin-top: 10vw;
+
+.description-input {
+  height: 30px;
+  margin-top: 20vw;
   border-bottom: 1px solid black;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.table-description {
+  content: "";
+}
+.text-area-description {
+  width: 80vw;
+  height: 50px;
 }
 .buttons-edit-exit {
   margin-top: 20vw;

@@ -97,8 +97,25 @@ li:hover .menu-sub {
   height: 100%;
 }
 .navbar-submenu-container {
-  margin-top: 0.1vw;
+  margin-top: 0.01vw;
 }
+.navbar-submenu-container:hover .wert {
+  content: "";
+  position: absolute;
+  z-index: -5;
+  width: 100%;
+  left: 0;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+/* .nav-area1:hover .wert {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+} */
 .navbar-submenu-container .menu-sub {
   position: absolute;
   width: 100%;
@@ -110,10 +127,18 @@ li:hover .menu-sub {
   line-height: 2rem;
   color: #ddd;
   background: white;
-  box-shadow: 0 220px 0px rgba(0, 0, 0, 0.4);
+  /* box-shadow: 0 220px 0px rgba(0, 0, 0, 0.4); */
   display: none;
-  z-index: 3;
+  z-index: 30;
 }
+/* .nav-area1 {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+}
+.main-menu2 {
+  position: relative;
+} */
 
 .menu-sub li {
   display: block;

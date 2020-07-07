@@ -14,6 +14,8 @@ class AddItem extends Component {
       codeTovara: "",
       shortDescription: "",
       description: "",
+      content: "",
+      applying: "",
       collectionsArray: [],
       imageUrl1: "",
       imageUrl2: "",
