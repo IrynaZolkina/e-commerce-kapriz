@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0315cc102dab1396fb81ffc59e7b8ee8",
+    "revision": "b8207db708aa82b24c625796ffca3a02",
     "url": "/e-commerce-kapriz/index.html"
   },
   {
-    "revision": "85ca69e2111a865369f4",
-    "url": "/e-commerce-kapriz/static/css/main.a7ee83b2.chunk.css"
+    "revision": "4b180bdba70e8824e849",
+    "url": "/e-commerce-kapriz/static/css/main.ce3f5280.chunk.css"
   },
   {
-    "revision": "1dac6fceb3b55d1d26c1",
-    "url": "/e-commerce-kapriz/static/js/2.4058e7b1.chunk.js"
+    "revision": "5689ddd9a5de3263a931",
+    "url": "/e-commerce-kapriz/static/js/2.9e3dd140.chunk.js"
   },
   {
     "revision": "a891348b5b506574d0decae32dbe4cfe",
-    "url": "/e-commerce-kapriz/static/js/2.4058e7b1.chunk.js.LICENSE.txt"
+    "url": "/e-commerce-kapriz/static/js/2.9e3dd140.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "85ca69e2111a865369f4",
-    "url": "/e-commerce-kapriz/static/js/main.695436d6.chunk.js"
+    "revision": "4b180bdba70e8824e849",
+    "url": "/e-commerce-kapriz/static/js/main.9d3a643c.chunk.js"
   },
   {
     "revision": "7faf5e59772c43c970da",
