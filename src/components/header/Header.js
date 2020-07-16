@@ -6,11 +6,12 @@ import { connect } from "react-redux";
 import "./header.styles.scss";
 
 //import { ReactComponent as Logo } from "../../assets/crown.svg";
-import CartIcon from "../cart-icon/CartIcon";
+//import CartIcon from "../cart-icon/CartIcon";
 import CartDropdown from "../cart/cart-dropdown/CartDropdown";
 import { selectCurrentUser } from "../../redux/user/userSelector";
 import { selectCartHidden } from "../../redux/cart/cartSelectors";
 import { createStructuredSelector } from "reselect";
+import CartIcon from "../cart/cart-icon/CartIcon";
 
 const Header = ({ currentUser, hidden }) => {
   return (
