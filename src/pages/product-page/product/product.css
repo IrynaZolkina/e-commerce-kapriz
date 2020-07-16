@@ -38,7 +38,7 @@
 .product-image-main {
   width: 100%;
   height: 100%;
-  min-height: 75vh;
+  /* min-height: 75vh; */
   border: 0px;
   background-position: center;
   background-size: cover;
@@ -282,14 +282,14 @@ label {
   margin: 1px auto;
 }
 .color-grid-container {
-  width: 80vw;
+  /*width: 20%;*/
   display: grid;
   grid-template-columns: 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr;
 
   grid-gap: 0.5em;
 }
 .color-item {
-  height: 20vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
 
@@ -325,4 +325,46 @@ label {
 }
 .buttons-edit-exit {
   margin-top: 20vw;
+}
+.title-group {
+  margin-bottom: 3rem;
+}
+.description-block {
+  width: 30%;
+
+  overflow: hidden;
+  display: none;
+}
+.show-description-block {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1vw;
+}
+.description-group {
+  padding: 1vw;
+  background-color: rgb(250, 246, 246);
+  width: 100%;
+}
+.description-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.3vw;
+}
+.desc {
+  overflow: hidden;
+  width: 28vw;
+  line-height: 0.8rem;
+}
+.desc .prt {
+  margin: 0;
+  height: 0.51rem;
+}
+.span-symbol {
+  color: red;
+  cursor: pointer;
+}
+.collections-block {
+  margin-top: 15vw;
 }

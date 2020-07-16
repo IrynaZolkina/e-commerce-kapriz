@@ -127,7 +127,7 @@ li:hover .menu-sub {
   line-height: 2rem;
   color: #ddd;
   background: white;
-  /* box-shadow: 0 220px 0px rgba(0, 0, 0, 0.4); */
+  box-shadow: 0 50px 40px rgba(0, 0, 0, 0.4);
   display: none;
   z-index: 30;
 }
@@ -147,7 +147,7 @@ li:hover .menu-sub {
   padding-bottom: 0;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 1.2vw;
+  font-size: 1.1vw;
   font-weight: 500;
 }
 .menu-sub .text-sub-sub-menu a {

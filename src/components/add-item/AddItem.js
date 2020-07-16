@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { firestore } from "../../firebase/FirebaseUtils";
 
-import Product from "../product/Product";
+import Product from "../../pages/product-page/product/Product";
 
 class AddItem extends Component {
   state = {
@@ -14,8 +14,11 @@ class AddItem extends Component {
       codeTovara: "",
       shortDescription: "",
       description: "",
+      arrayDescription: [],
       content: "",
+      arrayContent: [],
       applying: "",
+      arrayApplying: [],
       collectionsArray: [],
       imageUrl1: "",
       imageUrl2: "",

@@ -4,6 +4,7 @@ import { NavLink, withRouter } from "react-router-dom";
 import "./navbar.scss";
 import Submenu from "../submenu/Submenu";
 import firebase, { firestore } from "../../../firebase/FirebaseUtils";
+import CollectionPage from "../../../pages/collection-page/CollectionPage";
 
 class Navbar extends Component {
   constructor() {
@@ -68,7 +69,7 @@ class Navbar extends Component {
         },
         //********* */  "макияж"
         {
-          title: "макияж",
+          title: "Макіяж",
           order: "02",
           code: "000208",
           number: "02000000",
@@ -179,7 +180,7 @@ class Navbar extends Component {
             { title: "-Підводки", code: "000265", number: "02040202" },
             { title: "-База для тіней", code: "000266", number: "02040203" },
             { title: "-Тіні для повік", code: "000267", number: "02040204" },
-            { title: "-палетки з тінями", code: "000268", number: "02040205" },
+            { title: "-Палетки з тінями", code: "000268", number: "02040205" },
 
             { title: ".Накладні вії", code: "000269", number: "02040300" },
             { title: "-Пучкові вії", code: "000270", number: "02040301" },
@@ -241,12 +242,12 @@ class Navbar extends Component {
 
           number: "03000000",
           submenuItemsInColumn: {
-            first: "17",
-            second: "38",
-            third: "54",
-            forth: "78",
-            fifth: "97",
-            sixth: "150",
+            first: "18",
+            second: "39",
+            third: "55",
+            forth: "79",
+            fifth: "98",
+            sixth: "151",
           },
           subMenu: [
             {
@@ -281,7 +282,7 @@ class Navbar extends Component {
               level: "4",
             },
             {
-              title: "-Фарбуючі шампуні, маски, спреї",
+              title: "-Фарбуючі шампуні, маски, спреї та інше",
               code: "000007",
               number: "03010104",
               level: "4",
@@ -292,6 +293,13 @@ class Navbar extends Component {
               number: "03010105",
               level: "4",
             },
+            {
+              title: "-Для чоловіків",
+              code: "000446",
+              number: "03010106",
+              level: "4",
+            },
+
             {
               title: ".Освітлюючі засоби",
               code: "000009",
@@ -867,9 +875,9 @@ class Navbar extends Component {
           submenuItemsInColumn: {
             first: "11",
             second: "12",
-            third: "24",
-            forth: "25",
-            fifth: "40",
+            third: "25",
+            forth: "26",
+            fifth: "41",
             sixth: "",
           },
           subMenu: [
@@ -1025,6 +1033,12 @@ class Navbar extends Component {
               level: "4",
             },
             {
+              title: "-Iнше",
+              code: "000447",
+              number: "04000412",
+              level: "4",
+            },
+            {
               title:
                 "https://firebasestorage.googleapis.com/v0/b/justclockit-a0fa1.appspot.com/o/kapris%2Fnavbar%2Fmakeupmakeup2.jpg?alt=media&token=c117ff15-e225-450e-b578-6b2c2b95eaa7",
               number: "99999986",
@@ -1096,10 +1110,10 @@ class Navbar extends Component {
               level: "4",
             },
             {
-              title: "-Аксесуари",
+              title: ".Аксесуари",
               code: "000206",
-              number: "04000511",
-              level: "4",
+              number: "04000600",
+              level: "3",
             },
           ],
         },
@@ -1568,7 +1582,7 @@ class Navbar extends Component {
               number: "06000203",
             },
             {
-              title: "-Чоловічі фарби дляволосся",
+              title: "-Чоловічі фарби для волосся",
               code: "000314",
               number: "06000204",
             },
@@ -1593,7 +1607,7 @@ class Navbar extends Component {
               number: "06000302",
             },
             {
-              title: "-Станки,бритви і змінні картриджи",
+              title: "-Станки,бритви і змінні картриджi",
               code: "000319",
               number: "06000303",
             },
@@ -1760,7 +1774,7 @@ class Navbar extends Component {
               number: "07000500",
             },
             {
-              title: ".зубні пасти і щітки",
+              title: ".Зубні пасти і щітки",
               code: "000347",
               number: "07000600",
             },
@@ -2090,10 +2104,10 @@ class Navbar extends Component {
   }
 
   /*  last
-      code: "000445",
+      code: "000447",
       number: "99999973",*/
-  /* 
-  componentDidMount() {
+
+  /*componentDidMount() {
     const { navbarMenuTest } = this.state;
     console.log(navbarMenuTest, "navbarMenuTest");
     navbarMenuTest.map((mainmenu) => {
@@ -2101,16 +2115,9 @@ class Navbar extends Component {
         .collection("navbarTest")
         .doc()
         .set({ ...mainmenu });
-    });
-  } */
+    }); 
+  }*/
 
-  //const navbarFBaseRef = firestore.collection("navbarTest").get();
-  //navbarFBaseRef.map((element) => console.log(element.data()));
-  //}
-  /* componentDidMount() {
-    const navbarFBaseRef = firebase.firestore().collection("navbar").get();
-    navbarFBaseRef.map((element) => console.log(element.data()));
-   */
   render() {
     // if (this.state.clearSubmenu === true) {
     /* const navbarMenuTest2 = this.state.navbarMenuTest.map((el) =>

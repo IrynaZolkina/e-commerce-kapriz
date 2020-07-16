@@ -144,12 +144,12 @@ const CollectionItem = ({ item, addItem }) => {
             <div className="title title2">{title6}</div>
             <div
               className={`${
-                discountPrice !== "" ? "title line-through" : ""
+                discountPrice !== 0 ? "title line-through" : ""
               } title title-price`}
             >
               {parseFloat(price).toFixed(2)} грн.
             </div>
-            {discountPrice !== "" ? (
+            {discountPrice !== 0 ? (
               <div className="title title-discount">
                 {parseFloat(discountPrice).toFixed(2)} грн.
               </div>

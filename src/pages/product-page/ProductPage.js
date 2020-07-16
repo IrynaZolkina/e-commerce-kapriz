@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Product from "../../components/product/Product";
+import Product from "./product/Product";
 import { withRouter } from "react-router-dom";
 
 class ProductPage extends Component {
@@ -7,8 +7,8 @@ class ProductPage extends Component {
     //return <div>{this.props.id}</div>;
     return (
       <div>
-        {this.props.match.params.productId}
-        {/* {console.log(
+        {/* {this.props.match.params.productId}
+        {console.log(
           this.props.match.params.productId,
           "this.props.match.params.productId"
         )} */}

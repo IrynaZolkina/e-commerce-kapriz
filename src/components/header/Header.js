@@ -7,7 +7,7 @@ import "./header.styles.scss";
 
 //import { ReactComponent as Logo } from "../../assets/crown.svg";
 import CartIcon from "../cart-icon/CartIcon";
-import CartDropdown from "../cart-dropdown/CartDropdown";
+import CartDropdown from "../cart/cart-dropdown/CartDropdown";
 import { selectCurrentUser } from "../../redux/user/userSelector";
 import { selectCartHidden } from "../../redux/cart/cartSelectors";
 import { createStructuredSelector } from "reselect";
@@ -29,9 +29,9 @@ const Header = ({ currentUser, hidden }) => {
         {/* <Link to="/">КАПРИЗ</Link> */}
       </div>
       <div className="options">
-        <Link className="option" to="/shop">
+        {/* <Link className="option" to="/shop">
           SHOP
-        </Link>
+        </Link> */}
         <Link className="option" to="/collection/items">
           ALL
         </Link>
@@ -41,13 +41,13 @@ const Header = ({ currentUser, hidden }) => {
             New Product
           </Link>
         )} */}
-        <Link className="option" to="/sn">
+        {/* <Link className="option" to="/sn">
           SN
         </Link>
 
         <Link className="option" to="/slidernew">
           SliderNew
-        </Link>
+        </Link> */}
         {/*  <Link className="option" to="/slider6in18">
           SliderNew
         </Link> */}

@@ -68,7 +68,7 @@ class Submenu extends Component {
       return (
         /*  <div className="test47"> */
         <div className="navbar-submenu-container">
-          <div className="wert"></div>
+          {/* <div className="wert"></div> */}
           <div
             className="menu-sub"
             onClick={() => {

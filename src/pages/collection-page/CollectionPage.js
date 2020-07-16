@@ -5,21 +5,25 @@ import { firestore } from "../../firebase/FirebaseUtils";
 
 import "./collection.styles.scss";
 import CollectionItem from "./collection-item/CollectionItem";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, withRouter } from "react-router-dom";
 import ProductPage from "../product-page/ProductPage";
+import CollectionTest from "./CollectionTest";
 
 class CollectionPage extends Component {
-  state = { items: [] };
+  state = { items: [], collectionId: "" };
+
   unsubscribe = null;
 
-  componentDidMount = async () => {
+  componentDidMount = () => {
     //const colid = this.props.match.params.colid;
     //const colid = "000001";
     console.log(
       this.props.match.params.collectionId,
-      "this.props.match.params.colid"
+      " componentDidMount -this.props.match.params.colid"
     );
+    console.log(this.props.match.params, "this.props.match.params");
     const collectionId = this.props.match.params.collectionId;
+    this.setState({ collectionId: collectionId });
     collectionId &&
       (this.unsubscribe = firestore
         .collection(collectionId)
@@ -34,23 +38,65 @@ class CollectionPage extends Component {
         }));
   };
   componentWillUnmount = () => {
+    console.log(",,,,,,,componentWillUnmount");
     this.unsubscribe();
   };
-
+  componentDidUpdate = () => {
+    const collectionId1 = this.props.match.params.collectionId;
+    if (this.state.collectionId !== collectionId1) {
+      firestore
+        .collection(collectionId1)
+        .orderBy("createdAt", "desc")
+        .get()
+        .then((snapshop) => {
+          const items = snapshop.docs.map((doc) => {
+            return { id: doc.id, ...doc.data() };
+          });
+          this.setState({ items });
+          console.log(items, "-----items********");
+          console.log({ items }, "-----items");
+        });
+      this.setState({ collectionId: collectionId1 });
+    }
+  };
   render() {
-    const { collection } = this.props;
-    //const { title } = this.props.collection;
-    //console.log(this.props.match.params.collectionId, "**--xxx--***")--????? error;
-    //console.log(collection, "*************");
-    //console.log(title, "******title*******");
-    //console.log(items, "******items*******");
+    console.log(
+      this.props.match.params.collectionId,
+      "this.props.match.params.colid"
+    );
+    /* const collectionId1 = this.props.match.params.collectionId;
+    if (this.state.collectionId !== collectionId1) {
+      firestore
+        .collection(collectionId1)
+        .orderBy("createdAt", "desc")
+        .get()
+        .then((snapshop) => {
+          const items = snapshop.docs.map((doc) => {
+            return { id: doc.id, ...doc.data() };
+          });
+          this.setState({ items });
+          console.log(items, "-----items********");
+          console.log({ items }, "-----items");
+        });
+      this.setState({ collectionId: collectionId1 });
+    } */
+    /* const { collection } = this.props;
+    
     const { items } = this.state;
+    console.log(items, "******items*******");
+ */
     return (
-      <Switch>
+      <div>
+        <CollectionTest items={this.state.items} />
+      </div>
+    );
+
+    {
+      /* <Switch>
         <div className="collection-page">
-          {/* <h2 className="title">{title}</h2> */}
+          
           <div className="collection-items-grid-container">
-            {items.map((item) => (
+            {this.state.items.map((item) => (
               <CollectionItem key={item.id} item={item} />
             ))}
           </div>
@@ -59,8 +105,8 @@ class CollectionPage extends Component {
           path={`/collection/product/:productId`}
           component={ProductPage}
         />
-      </Switch>
-    );
+      </Switch> */
+    }
   }
 }
 
@@ -69,3 +115,4 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 export default connect(mapStateToProps)(CollectionPage);
+/* export default withRouter(CollectionPage); */

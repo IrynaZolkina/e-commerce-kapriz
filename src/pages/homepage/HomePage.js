@@ -10,10 +10,10 @@ const HomePage = () => {
       <div className="main-slider-wrap">
         <Slider />
       </div>
-      <div className="slider3in8-wrap">
+      {/* <div className="slider3in8-wrap">
         <Slider3in8 sliderName={"топ продажу".toUpperCase()} />
       </div>
-      <Directory />
+      <Directory /> */}
     </div>
   );
 };

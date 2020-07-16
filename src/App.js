@@ -73,14 +73,14 @@ class App extends Component {
           />
           <Route exact path="/new" component={NewProduct} />
           <Route path="/slidernew" component={SliderNew} />
-          <Route path="/sn" component={Sn} />
+          {/*  <Route path="/sn" component={Sn} /> */}
           {/*  <Route path="/slider6in18" component={Slider6in18} /> */}
 
-          <Route
-            exact
+          <Route path="/collection/:collectionId" component={CollectionPage} />
+          {/* <Route
             path="/collection/:collectionId"
-            component={CollectionPage}
-          />
+            render={() => <CollectionPage />}
+          /> */}
           <Route
             exact
             path="/signin"

@@ -2,25 +2,26 @@ import React, { Component } from "react";
 
 import "./product.css";
 
-import { firestore } from "../../firebase/FirebaseUtils";
+import { firestore } from "../../../firebase/FirebaseUtils";
 //import EditFields from "../edit-fields/EditFields";
-import { storage } from "../../firebase/FirebaseUtils";
-import firebase from "../../firebase/FirebaseUtils";
+import { storage } from "../../../firebase/FirebaseUtils";
+import firebase from "../../../firebase/FirebaseUtils";
 //import FormInput from "../../utilities/form-input/FormInput";
 //import SelectCollection from "../select-collection/SelectCollection";
 //import CollectionList from "../collection-list/CollectionList";
-import Collections from "../collections/Collections";
+import Collections from "../../../components/collections/Collections";
 import ProductSmallImage from "../product-small-image/ProductSmallImage";
-import FormInput from "../form-input/FormInput";
-import FormInputSmall from "../form-input-small/FormInputSmall";
+import FormInput from "../../../components/form-input/FormInput";
+import FormInputSmall from "../../../components/form-input-small/FormInputSmall";
 import { withRouter } from "react-router-dom";
 import { exists } from "fs";
-import Slider3in8 from "../slider-3-un-8-sec/Slider3in8";
+import Slider3in8 from "../../../components/slider-3-un-8-sec/Slider3in8";
 
 import { connect } from "react-redux";
-import { addItem } from "../../redux/cart/cartActions";
-import CustomButtonAdopted from "../custom-button-adopted/CustomButtonAdopted";
-import Slider6in18 from "../slider-6-un-18-sec/Slider6in18";
+import { addItem } from "../../../redux/cart/cartActions";
+import CustomButtonAdopted from "../../../components/custom-button-adopted/CustomButtonAdopted";
+import Slider6in18 from "../../../components/slider-6-un-18-sec/Slider6in18";
+import ProductTitleGroup from "./ProductTitleGroup";
 //import { storage } from "firebase";
 //import { storage } from "firebase";
 
@@ -49,9 +50,10 @@ class Product extends Component {
     palitra: [],
     number: "",
     numberTitle: "",
+    numberCodeTovara: "",
     numberImageUrl: "",
     temporaryUrl: "",
-    item: [],
+    item: null,
 
     showMenu: false,
     arrayNavbar: [],
@@ -75,6 +77,13 @@ class Product extends Component {
     mainImageUrl: "",
     editMode: false,
     descriptionForShow: "",
+    inputToArray: "",
+    showArrayDescription: false,
+    showArrayApplying: false,
+    showArrayContent: false,
+    arrayDescription: [],
+    arrayApplying: [],
+    arrayContent: [],
   };
 
   unsubscribe = null;
@@ -118,10 +127,11 @@ class Product extends Component {
           const item = snapshot.data();
 
           this.setState({ ...item });
+          this.setState({ item: item });
 
           this.setState({ mainImageUrl: item.imageUrl1 });
 
-          const title = item.title;
+          /* const title = item.title;
           const titleCode = item.titleCode;
           const priceInput = item.price;
           const discountPriceInput = item.discountPrice;
@@ -201,7 +211,7 @@ class Product extends Component {
           this.setState({ priceInput: priceInput });
           this.setState({ discountPriceInput: discountPriceInput });
           this.setState({ codeTovaraInput: codeTovaraInput });
-          this.setState({ descriptionForShow: description });
+          this.setState({ descriptionForShow: description }); */
         }
       });
   };
@@ -359,6 +369,13 @@ class Product extends Component {
 
     this.setState({ [name]: value });
   };
+  handleChangeStateNovinka = (event) => {
+    //const { novinka } = event.target;
+    //console.log(name, "***", value);
+
+    //this.setState({ [name]: value });
+    this.setState({ novinka: !this.state.novinka });
+  };
   handleSubmitAll = () => {
     const length1 = this.state.title1Input.length;
     const length2 = this.state.title2Input.length;
@@ -430,6 +447,36 @@ class Product extends Component {
       { merge: true }
     );
   };
+  submitArrayDescription = () => {
+    let array = [...this.state.arrayDescription, this.state.inputToArray];
+    firestore.collection("items").doc(this.props.id).set(
+      {
+        arrayDescription: array,
+      },
+      { merge: true }
+    );
+    this.setState({ inputToArray: "" });
+  };
+  submitArrayApplying = () => {
+    let array = [...this.state.arrayApplying, this.state.inputToArray];
+    firestore.collection("items").doc(this.props.id).set(
+      {
+        arrayApplying: array,
+      },
+      { merge: true }
+    );
+    this.setState({ inputToArray: "" });
+  };
+  submitArrayContent = () => {
+    let array = [...this.state.arrayContent, this.state.inputToArray];
+    firestore.collection("items").doc(this.props.id).set(
+      {
+        arrayContent: array,
+      },
+      { merge: true }
+    );
+    this.setState({ inputToArray: "" });
+  };
 
   handleChangeColor = (e) => {
     const { value, index } = e.target;
@@ -440,11 +487,66 @@ class Product extends Component {
     //palitra[index].number = value;
     //this.setState({ palitra: palitra });
   };
-  handleSubmitColor = () => {
+  handleSubmitPalitra = () => {
+    let time = new Date().toString();
+
+    const month = time.slice(4, 7);
+    let monthNum = "";
+    switch (month) {
+      case "Jen":
+        monthNum = "01";
+        break;
+      case "Feb":
+        monthNum = "02";
+        break;
+      case "Mar":
+        monthNum = "03";
+        break;
+      case "Apr":
+        monthNum = "04";
+        break;
+      case "May":
+        monthNum = "05";
+        break;
+      case "Jun":
+        monthNum = "06";
+        break;
+      case "Jul":
+        monthNum = "07";
+        break;
+      case "Aug":
+        monthNum = "08";
+        break;
+      case "Sep":
+        monthNum = "09";
+        break;
+      case "Oct":
+        monthNum = "10";
+        break;
+      case "Nov":
+        monthNum = "11";
+        break;
+      case "Dec":
+        monthNum = "12";
+        break;
+      default:
+        break;
+    }
+    const timeId =
+      time.slice(11, 15) +
+      "-" +
+      monthNum +
+      "-" +
+      time.slice(8, 10) +
+      "." +
+      time.slice(16, 24);
+
     const object = {
       number: this.state.number,
       numberTitle: this.state.numberTitle,
+      numberCodeTovara: this.state.numberCodeTovara,
       numberImageUrl: this.state.temporaryUrl,
+      numberId: timeId,
     };
     const palitra = [...this.state.palitra, object];
     firestore
@@ -456,13 +558,31 @@ class Product extends Component {
         },
         { merge: true }
       );
+    firestore.collection("items-palitra").doc(this.state.numberCodeTovara).set(
+      {
+        parent: this.props.id,
+      },
+      { merge: true }
+    );
     this.setState({
       palitra: [],
       number: "",
       numberTitle: "",
       numberImageUrl: "",
+      numberCodeTovara: "",
       temporaryUrl: "",
     });
+  };
+  /* onClick={() => this.props.addItem(item)} */
+  buttonAddPalitraToCart = (element) => {
+    let item = {
+      id: element.numberId,
+      price: this.state.discountPrice,
+      name: this.state.title + element.numberTitle,
+      imageUrl1: element.numberImageUrl,
+      codeTovara: element.numberCodeTovara,
+    };
+    this.props.addItem(item);
   };
   handleSubmitChangeColorNumber = (index) => {
     const palitra = [...this.state.palitra];
@@ -480,9 +600,11 @@ class Product extends Component {
   handleDeleteColor = (index) => {
     const palitra = [...this.state.palitra];
     let imageName = "";
+    let codeTovara = "";
     const filteredPalitra = palitra.filter((value, ind) => {
       if (ind === index) {
         imageName = value.number;
+        codeTovara = value.numberCodeTovara;
       } else return ind !== index;
     });
 
@@ -499,6 +621,7 @@ class Product extends Component {
         },
         { merge: true }
       );
+    firestore.collection("items-palitra").doc(codeTovara).delete();
   };
   handleDiscard = (name) => {
     console.log("title1", name);
@@ -631,7 +754,7 @@ class Product extends Component {
   render() {
     //console.log("history-", this.props.history);
     //console.log("id-", this.props.id);
-    //console.log("item-", this.state.item);
+    // console.log("state", this.state);
     const { id } = this.props;
     const {
       title,
@@ -640,6 +763,12 @@ class Product extends Component {
       titleCode,
       codeTovara,
       description,
+      arrayDescription,
+      arrayApplying,
+      arrayContent,
+      showArrayDescription,
+      showArrayApplying,
+      showArrayContent,
       content,
       applying,
       createdAt,
@@ -656,6 +785,7 @@ class Product extends Component {
       palitra,
       number,
       numberTitle,
+      numberCodeTovara,
       numberImageUrl,
       temporaryUrl,
       arrayNavbar,
@@ -677,6 +807,7 @@ class Product extends Component {
       mainImageUrl,
       editMode,
       descriptionForShow,
+      inputToArray,
     } = this.state;
 
     const item = this.state.item;
@@ -685,7 +816,8 @@ class Product extends Component {
 
     //console.log("hhhhhhhhhh", string1);
     //console.log("hhhhhhhhhhhhhhhhhhhhhhhhh", this.state);
-    //console.log("--------item------------", item);
+    console.log("--------item------------", item);
+    console.log("--------arrayDescription-----", arrayDescription);
     return (
       <div>
         {/* <h1>{id}</h1> */}
@@ -756,8 +888,10 @@ class Product extends Component {
                 editMode={editMode}
               />
             </div>
+
             <div className="upload-btn-wrapper-main product-main-image  ">
               <div className="product-main">
+                {" "}
                 <div
                   className="product-image-main"
                   style={{
@@ -776,183 +910,238 @@ class Product extends Component {
             </div>
 
             <div className="product-title-container">
-              <div className="title-brand">{title1}</div>
-              <div className="title-name">{title2}</div>
-              <div className="title-name1">{title3}</div>
-              <div className="title-name2">{title4}</div>
-              <div className="title-size">{title5}</div>
-              <div className="title-producer">{title6}</div>
-              <div className="title-code-tovara">{codeTovara}</div>
-              <div
-                className={`${
-                  discountPrice !== 0 ? "line-through" : ""
-                } title-price`}
-              >
-                {price} грн.
-              </div>
-              {discountPrice !== 0 && (
-                <div>
-                  {" "}
-                  <div className="title-discount-price">
-                    {discountPrice} грн.
-                  </div>
-                  <div>
-                    Знижка-
-                    {Math.floor(
-                      ((price - discountPrice) / discountPrice) * 100
-                    )}
-                    %
+              {item !== null && (
+                <ProductTitleGroup
+                  item={this.state.item}
+                  id={id}
+                  editMode={editMode}
+                />
+              )}
+              {(arrayDescription.length !== 0 || editMode) && (
+                <div className="description-group">
+                  <div className="desc">
+                    <div className="description-title">
+                      <span> Опис</span>
+                      {showArrayDescription === false ? (
+                        <span
+                          className="span-symbol"
+                          onClick={() =>
+                            this.setState({ showArrayDescription: true })
+                          }
+                        >
+                          &#8853;
+                        </span>
+                      ) : (
+                        <span
+                          className="span-symbol"
+                          onClick={() =>
+                            this.setState({ showArrayDescription: false })
+                          }
+                        >
+                          &#8854;
+                        </span>
+                      )}
+                    </div>
+                    <div
+                      className={
+                        showArrayDescription === true
+                          ? "show-description-block"
+                          : "description-block"
+                      }
+                    >
+                      {arrayDescription &&
+                        arrayDescription.map((string, index) => (
+                          <div key={index}>
+                            <span>{string}</span>
+                            <p className="prt"></p>
+                          </div>
+                        ))}{" "}
+                      {editMode === true && (
+                        <div>
+                          <input
+                            type="text"
+                            name="inputToArray"
+                            value={inputToArray}
+                            label="inputToArray"
+                            onChange={this.handleChangeStateByName}
+                          />
+                          <button onClick={this.submitArrayDescription}>
+                            {" "}
+                            Абзац закончен
+                          </button>
+                          <button
+                            onClick={() =>
+                              firestore
+                                .collection("items")
+                                .doc(this.props.id)
+                                .set(
+                                  {
+                                    arrayDescription: [],
+                                  },
+                                  { merge: true }
+                                )
+                            }
+                          >
+                            Delete Опис
+                          </button>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
               )}
-              <div className="button-collection-items">
-                <CustomButtonAdopted
-                  onClick={() => this.props.addItem(item)}
-                  inverted
-                >
-                  В КОШИК
-                </CustomButtonAdopted>
-              </div>
-              {editMode === true && (
-                <div className="edit-group">
-                  {/*********   name="title1"   ************/}
-                  <div className="edit-field-container">
-                    <FormInputSmall
-                      type="text"
-                      name="title1Input"
-                      label="БРЕНД"
-                      value={title1Input}
-                      onChange={this.handleChangeStateByName}
-                    />
+              {(arrayApplying.length !== 0 || editMode) && (
+                <div className="description-group">
+                  <div className="desc">
+                    <div className="description-title">
+                      <span>Як використовувати</span>
+                      {showArrayApplying === false ? (
+                        <span
+                          className="span-symbol"
+                          onClick={() =>
+                            this.setState({ showArrayApplying: true })
+                          }
+                        >
+                          &#8853;
+                        </span>
+                      ) : (
+                        <span
+                          className="span-symbol"
+                          onClick={() =>
+                            this.setState({ showArrayApplying: false })
+                          }
+                        >
+                          &#8854;
+                        </span>
+                      )}
+                    </div>
+                    <div
+                      className={
+                        showArrayApplying === true
+                          ? "show-description-block"
+                          : "description-block"
+                      }
+                    >
+                      {arrayApplying &&
+                        arrayApplying.map((string, index) => (
+                          <div key={index}>
+                            <span>{string}</span>
+                            <p className="prt"></p>
+                          </div>
+                        ))}{" "}
+                      {editMode === true && (
+                        <div>
+                          <input
+                            type="text"
+                            name="inputToArray"
+                            value={inputToArray}
+                            label="inputToArray"
+                            onChange={this.handleChangeStateByName}
+                          />
+                          <button onClick={this.submitArrayApplying}>
+                            {" "}
+                            Абзац закончен
+                          </button>
+                          <button
+                            onClick={() =>
+                              firestore
+                                .collection("items")
+                                .doc(this.props.id)
+                                .set(
+                                  {
+                                    arrayApplying: [],
+                                  },
+                                  { merge: true }
+                                )
+                            }
+                          >
+                            Delete
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )}
 
-                    {/* <button
-                      className="x-button"
-                      onClick={() => this.handleDiscard("title1")}
+              {(arrayContent.length !== 0 || editMode) && (
+                <div className="description-group">
+                  <div className="desc">
+                    <div className="description-title">
+                      <span>Состав</span>
+                      {showArrayContent === false ? (
+                        <span
+                          className="span-symbol"
+                          onClick={() =>
+                            this.setState({ showArrayContent: true })
+                          }
+                        >
+                          &#8853;
+                        </span>
+                      ) : (
+                        <span
+                          className="span-symbol"
+                          onClick={() =>
+                            this.setState({ showArrayContent: false })
+                          }
+                        >
+                          &#8854;
+                        </span>
+                      )}
+                    </div>
+                    <div
+                      className={
+                        showArrayContent === true
+                          ? "show-description-block"
+                          : "description-block"
+                      }
                     >
-                      Отмена
-                    </button> */}
+                      {arrayContent &&
+                        arrayContent.map((string, index) => (
+                          <div key={index}>
+                            <span>{string}</span>
+                            <p className="prt"></p>
+                          </div>
+                        ))}{" "}
+                      {editMode === true && (
+                        <div>
+                          <input
+                            type="text"
+                            name="inputToArray"
+                            value={inputToArray}
+                            label="inputToArray"
+                            onChange={this.handleChangeStateByName}
+                          />
+                          <button onClick={this.submitArrayContent}>
+                            {" "}
+                            Абзац закончен
+                          </button>
+                          <button
+                            onClick={() =>
+                              firestore
+                                .collection("items")
+                                .doc(this.props.id)
+                                .set(
+                                  {
+                                    arrayContent: [],
+                                  },
+                                  { merge: true }
+                                )
+                            }
+                          >
+                            Delete Состав
+                          </button>
+                        </div>
+                      )}
+                    </div>
                   </div>
-                  {/*********   name="title2"   ************/}
-                  <div className="edit-field-container">
-                    <FormInputSmall
-                      type="text"
-                      name="title2Input"
-                      label="Название"
-                      value={title2Input}
-                      onChange={this.handleChangeStateByName}
-                    />
-                    {/* <button
-                      className="x-button"
-                      onClick={() => this.handleDiscard("title2")}
-                    >
-                      Отмена
-                    </button> */}
-                  </div>
-                  {/*********   name="title3"   ************/}
-                  <div className="edit-field-container">
-                    <FormInputSmall
-                      type="text"
-                      name="title3Input"
-                      label="Подробное название - 1 строка"
-                      value={title3Input}
-                      onChange={this.handleChangeStateByName}
-                    />
-                    {/* <button
-                      className="x-button"
-                      onClick={() => this.handleDiscard("title3")}
-                    >
-                      Отмена
-                    </button> */}
-                  </div>
-                  {/*********   name="title4"   ************/}
-                  <div className="edit-field-container">
-                    <FormInputSmall
-                      type="text"
-                      name="title4Input"
-                      label="Подробное название - 2 строка"
-                      value={title4Input}
-                      onChange={this.handleChangeStateByName}
-                    />
-                  </div>
-                  {/*********   name="title5"   ************/}
-                  <div className="edit-field-container">
-                    <FormInputSmall
-                      type="text"
-                      name="title5Input"
-                      label="Объём"
-                      value={title5Input}
-                      onChange={this.handleChangeStateByName}
-                    />
-                  </div>
-                  {/*********   name="title6"   ************/}
-                  <div className="edit-field-container">
-                    <FormInputSmall
-                      type="text"
-                      name="title6Input"
-                      label="Страна"
-                      value={title6Input}
-                      onChange={this.handleChangeStateByName}
-                    />
-                  </div>
-                  {/*********   name="price"   ************/}
-                  <div className="edit-field-container">
-                    <FormInputSmall
-                      type="number"
-                      step=".01"
-                      name="priceInput"
-                      value={priceInput}
-                      label="Цена"
-                      onChange={this.handleChangeStateByName}
-                    />
-                  </div>
-                  {/*********   name="discountPrice"*******/}
-                  <div className="edit-field-container">
-                    <FormInputSmall
-                      type="number"
-                      step=".01"
-                      name="discountPriceInput"
-                      value={discountPriceInput}
-                      label="Цена со скидкой"
-                      onChange={this.handleChangeStateByName}
-                    />
-                  </div>
-                  {/*********   name="codeTovara"   ************/}
-                  <div className="edit-field-container">
-                    <FormInputSmall
-                      type="text"
-                      name="codeTovaraInput"
-                      value={codeTovaraInput}
-                      label="Код товара"
-                      onChange={this.handleChangeStateByName}
-                    />
-                  </div>
-                  {/*********   name="novinka"   ************/}
-                  <div className="edit-field-container novinka">
-                    {/* <label htmlFor="novinka">Novinka</label> */}
-                    <FormInputSmall
-                      id="novinka"
-                      type="checkbox"
-                      name="novinka"
-                      value={novinka}
-                      checked={novinka}
-                      label="НОВИНКА"
-                      onChange={() => this.setState({ novinka: !novinka })}
-                    />
-                  </div>
-
-                  <button
-                    className="x-button"
-                    onClick={() => this.handleSubmitAll()}
-                  >
-                    Сохранить
-                  </button>
                 </div>
               )}
             </div>
           </div>
 
           {/*********   name="palitra"   ************/}
-          {palitra && (
+          {codeTovara === "" && palitra.length !== 0 && (
             <div className="colors-container">
               <div className="color-grid-container">
                 {palitra.map((element, index) => (
@@ -976,126 +1165,67 @@ class Product extends Component {
 
                     <div className="color-number">{element.number}</div>
                     <div className="color-number">{element.numberTitle}</div>
-                    <div>
-                      <button onClick={() => this.handleDeleteColor(index)}>
-                        Delete
-                      </button>{" "}
-                      {/**/}
+                    <div className="color-number">
+                      {element.numberCodeTovara}
                     </div>
+                    <div className="button-collection-items">
+                      <CustomButtonAdopted
+                        /* onClick={() => this.props.addItem(item)} */
+                        onClick={() => this.buttonAddPalitraToCart(element)}
+                        inverted
+                      >
+                        В КОШИК
+                      </CustomButtonAdopted>
+                    </div>
+                    {editMode === true && (
+                      <div>
+                        <button onClick={() => this.handleDeleteColor(index)}>
+                          Delete
+                        </button>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
             </div>
           )}
-          {editMode === true ? (
-            <div className="edit-field-container">
-              <FormInputSmall
-                type="text"
-                name="number"
-                value={number}
-                label="Номер"
-                onChange={this.handleChangeStateByName}
-              />
-              <FormInputSmall
-                type="text"
-                name="numberTitle"
-                value={numberTitle}
-                label="Название"
-                onChange={this.handleChangeStateByName}
-              />
+          {editMode === true
+            ? codeTovara === "" && (
+                <div className="edit-field-container">
+                  <FormInputSmall
+                    type="text"
+                    name="number"
+                    value={number}
+                    label="Номер"
+                    onChange={this.handleChangeStateByName}
+                  />
+                  <FormInputSmall
+                    type="text"
+                    name="numberTitle"
+                    value={numberTitle}
+                    label="Название"
+                    onChange={this.handleChangeStateByName}
+                  />
+                  <FormInputSmall
+                    type="text"
+                    name="numberCodeTovara"
+                    value={numberCodeTovara}
+                    label="Н"
+                    onChange={this.handleChangeStateByName}
+                  />
 
-              <button
-                className="x-button"
-                onClick={() => this.handleSubmitColor()}
-              >
-                Submit Palitra
-              </button>
-            </div>
-          ) : null}
-          <div className="description-input">
-            {description && (
-              <div
-                onClick={() => {
-                  this.setState({ descriptionForShow: description });
-                }}
-                className="table-description"
-              >
-                Описание
-              </div>
-            )}
-            {applying && (
-              <div
-                onClick={() => {
-                  this.setState({ descriptionForShow: applying });
-                }}
-                className="table-description"
-              >
-                Применение
-              </div>
-            )}
-            {content && (
-              <div
-                onClick={() => {
-                  this.setState({ descriptionForShow: content });
-                }}
-                className="table-description"
-              >
-                Состав
-              </div>
-            )}
-          </div>
-
-          {description && (
-            <div className="table-description">{descriptionForShow}</div>
-          )}
+                  <button
+                    className="x-button"
+                    onClick={() => this.handleSubmitPalitra()}
+                  >
+                    Submit Palitra
+                  </button>
+                </div>
+              )
+            : null}
 
           {editMode === true ? (
-            <div className="">
-              {/* <label>Full Description</label> */}
-              <div className="text-area-description">Описание</div>
-              <textarea
-                rows="12"
-                cols="150"
-                className=""
-                id="description"
-                name="description"
-                value={description}
-                onChange={(e) =>
-                  this.setState({ description: e.currentTarget.value })
-                }
-              ></textarea>
-
-              <div className="table-description">Применение</div>
-              <textarea
-                rows="12"
-                cols="150"
-                className=""
-                id="applying"
-                name="applying"
-                value={applying}
-                onChange={(e) =>
-                  this.setState({ applying: e.currentTarget.value })
-                }
-              ></textarea>
-              <div className="table-description">Состав</div>
-              <textarea
-                rows="12"
-                cols="150"
-                className=""
-                id="content"
-                name="content"
-                value={content}
-                onChange={(e) =>
-                  this.setState({ content: e.currentTarget.value })
-                }
-              ></textarea>
-              <button onClick={this.submitDescription}> Сохранить</button>
-            </div>
-          ) : null}
-          {/* <Slider6in18 /> */}
-
-          {editMode === true ? (
-            <div>
+            <div className="collections-block">
               <Collections
                 id={this.props.id}
                 collectionsArray={collectionsArray}
@@ -1139,6 +1269,7 @@ class Product extends Component {
 
 const mapDispatchToProps = (dispatch) => ({
   addItem: (item) => dispatch(addItem(item)),
+  /* addItem: (item) => dispatch(addItem(item)), */
 });
 
 export default withRouter(connect(null, mapDispatchToProps)(Product));
