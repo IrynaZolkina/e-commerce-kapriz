@@ -107,7 +107,7 @@ const CollectionItem = ({ item, addItem }) => {
     <div className="collection-grid-item">
       <NavLink to={`/collection/product/${id}`}>
         <div className="item-container">
-          <div className="new-string">{novinka === true ? "NEW" : " "}</div>
+          <div className="new-string">{novinka === true ? "НОВИНКА" : " "}</div>
           {/* <div className={`${novinka === true ? "" : "empty-string"}`}>
             {novinka === true ? "NEW" : "NOT NEW"}
           </div> */}

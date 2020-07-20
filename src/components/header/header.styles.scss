@@ -2,7 +2,7 @@
   height: 4.5vw;
   width: 100%;
   display: grid;
-  grid-template-columns: 10% 48% 42%;
+  grid-template-columns: 13% 45% 42%;
   justify-items: end;
   /* display: flex;
   justify-content: space-between;
@@ -10,17 +10,17 @@
 
   .logo-container {
     height: 100%;
-    width: 7vw;
+    width: 6vw;
     /* padding: 25px; */
   }
   .logo-kapriz {
     content: "";
     background-position: center;
     background-size: cover;
-    width: 5vw;
-    height: 6vw;
-    /* padding-left: 5%; */
-    margin-left: 4vw;
+    width: 4vw;
+    height: 5vw;
+    /* padding-left: 5%; 
+    margin-left: 14vw;*/
     margin-top: 0.8vw;
   }
   .main-title {
@@ -31,11 +31,14 @@
 
     /* top: -1.6vh; */
     a {
-      font-size: 6vw;
+      font-size: 5.8vw;
       font-family: "Cormorant Infant", serif;
       color: black;
       padding: 0;
       margin: -1vw;
+      span {
+        font-size: 5.3vw;
+      }
     }
   }
 

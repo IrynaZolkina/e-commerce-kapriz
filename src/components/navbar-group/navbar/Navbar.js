@@ -10,6 +10,10 @@ class Navbar extends Component {
   constructor() {
     super();
     this.state = {
+      showSideMenu: false,
+      showSideMenuSub: false,
+      showSideMenuSubSub: false,
+      showIndex: "",
       showSubmenu: true,
       navbarMenuTest: [
         //********* */  "парфуми",
@@ -362,7 +366,7 @@ class Navbar extends Component {
             },
 
             {
-              title: "# ДОГЛЯД ЗА ВОЛОССЯМ ",
+              title: "#ДОГЛЯД ЗА ВОЛОССЯМ ",
               code: "000019",
               number: "03020000",
               level: "2",
@@ -2126,45 +2130,151 @@ class Navbar extends Component {
     //console.log(navbarMenuTest2, "navbarMenuTest2");
     return (
       <div>
-        <div className="navbar-container">
-          <ul className="navbar-menu">
-            {this.state.navbarMenuTest.map((element, index) => {
-              return (
-                <li className="navbar-menu-link" key={index}>
-                  <NavLink
-                    to={`/collection/${element.code}`}
-                    className="hover-border"
-                    onClick={() => {
-                      this.setState({ showSubmenu: false });
-                      setTimeout(
-                        () => this.setState({ showSubmenu: true }),
-                        1500
-                      );
-                    }}
-                  >
-                    {element.title.toUpperCase()}
-                  </NavLink>
-
-                  {this.state.showSubmenu && (
-                    <div className="nav-area1">
-                      <div className="main-menu2">
-                        <div>
-                          <div>
-                            <Submenu
-                              navbarSubMenu={element.subMenu}
-                              submenuItemsInColumn={
-                                element.submenuItemsInColumn
+        <div className="navbar">
+          <div
+            className="toggle-button"
+            onClick={() => this.setState({ showSideMenu: true })}
+          >
+            <div className="bars">
+              <span className="bar"></span>
+              <span className="bar"></span>
+              <span className="bar"></span>
+            </div>
+            <span className="bars-title">Menu</span>
+          </div>
+          <div className={this.state.showSideMenu ? "rrt" : "rrt-none"}>
+            <div
+              className="black-back"
+              onClick={() => this.setState({ showSideMenu: false })}
+            ></div>
+            <ul className="side-main">
+              <div className="side-menu-title">
+                MENU
+                <span onClick={() => this.setState({ showSideMenu: false })}>
+                  &#10005;
+                </span>
+              </div>
+              {this.state.navbarMenuTest.map((element, index) => {
+                return (
+                  <div>
+                    <div
+                      className="side-menu-link"
+                      onClick={() =>
+                        this.setState({
+                          showSideMenuSub: true,
+                          showIndex: index,
+                        })
+                      }
+                      key={index}
+                    >
+                      {element.title.toUpperCase()}
+                      <div>
+                        {(this.state.showIndex === index) &
+                        (this.state.showSideMenuSub === true) ? (
+                          <span
+                            onClick={() => (
+                              console.log("ggggggggggggggg"),
+                              this.setState({
+                                showSideMenuSub: false,
+                              })
+                            )}
+                          >
+                            &#8212;
+                          </span>
+                        ) : (
+                          <span
+                            onClick={() => (
+                              console.log("+++++++++++"),
+                              this.setState({
+                                showSideMenuSub: true,
+                              })
+                            )}
+                          >
+                            {" "}
+                            &#10095;
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                    {/* {this.state.showIndex &  */}
+                    {index === this.state.showIndex &&
+                      element.subMenu.map((el, ind) =>
+                        el.title.search("#") === 0 ? (
+                          <div key={ind} className="side-menu-sub">
+                            <div
+                              className={
+                                this.state.showSideMenuSub
+                                  ? "show-side-menu-sub"
+                                  : "close-side-menu-sub"
                               }
-                            />
+                            >
+                              {el.title}
+                            </div>
+                          </div>
+                        ) : (el.title.substring(0, 1) === ".") &
+                          (index === 0 ||
+                            index === 3 ||
+                            index === 5 ||
+                            index === 6 ||
+                            index === 8) ? (
+                          <div key={ind} className="side-menu-sub">
+                            <div
+                              className={
+                                this.state.showSideMenuSub
+                                  ? "show-side-menu-sub"
+                                  : "close-side-menu-sub"
+                              }
+                            >
+                              {el.title}
+                            </div>
+                          </div>
+                        ) : null
+                      )}
+                  </div>
+                );
+              })}
+            </ul>
+          </div>
+          <div className="navbar-links">
+            <ul className="navbar-menu">
+              {this.state.navbarMenuTest.map((element, index) => {
+                return (
+                  <li className="navbar-menu-link" key={index}>
+                    <NavLink
+                      to={`/collection/${element.code}`}
+                      className="hover-border"
+                      onClick={() => {
+                        this.setState({ showSubmenu: false });
+                        setTimeout(
+                          () => this.setState({ showSubmenu: true }),
+                          1500
+                        );
+                      }}
+                    >
+                      {element.title.toUpperCase()}
+                    </NavLink>
+
+                    {this.state.showSubmenu && (
+                      <div className="nav-area1">
+                        <div className="main-menu2">
+                          <div>
+                            <div>
+                              <Submenu
+                                navbarSubMenu={element.subMenu}
+                                submenuItemsInColumn={
+                                  element.submenuItemsInColumn
+                                }
+                              />
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  )}
-                </li>
-              );
-            })}
-          </ul>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
       </div>
     );

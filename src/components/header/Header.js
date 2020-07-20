@@ -26,7 +26,9 @@ const Header = ({ currentUser, hidden }) => {
         ></Link>
       </div>
       <div className="main-title">
-        <Link to="/">каприз</Link>
+        <Link to="/">
+          <span>К</span>априз
+        </Link>
         {/* <Link to="/">КАПРИЗ</Link> */}
       </div>
       <div className="options">
@@ -42,10 +44,10 @@ const Header = ({ currentUser, hidden }) => {
             New Product
           </Link>
         )} */}
-        {/* <Link className="option" to="/sn">
+        <Link className="option" to="/sn">
           SN
         </Link>
-
+        {/*
         <Link className="option" to="/slidernew">
           SliderNew
         </Link> */}

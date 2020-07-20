@@ -131,7 +131,12 @@ class Slider extends Component {
                 <div className="par">
                   <p className="par1">НОВИНКИ СЕЗОНА</p>
                   <p className="par2">{"НОВИНКИ СЕЗОНА".toUpperCase()}</p>
-                  <div className="btn btn-large">ПОСМОТРЕТЬ</div>
+                  <div
+                    className="btn btn-large"
+                    onClick={() => console.log("ПОСМОТРЕТЬ")}
+                  >
+                    ПОСМОТРЕТЬ
+                  </div>
                 </div>{" "}
               </div>
               <div

@@ -1,3 +1,17 @@
+.grid-container {
+  height: 50vh;
+  border: 10px solid #14a76c;
+  display: grid;
+  grid-template-columns: 200px;
+}
+.grid-item {
+  background-color: #ccc;
+  border: 4px solid #ff653f;
+  padding: 20px;
+}
+
+/*************    Tutorial with BURGER Menu
+
 .b-body {
   box-sizing: border-box;
   padding: 0;
@@ -168,3 +182,4 @@
   text-decoration: none;
   transition: color 0.5s ease;
 }
+ */

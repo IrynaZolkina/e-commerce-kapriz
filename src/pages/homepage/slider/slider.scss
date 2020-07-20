@@ -2,24 +2,25 @@
 
 .container-slider {
   margin: 2% auto;
-  margin-top: 1%;
+  margin-top: 0.1%;
   overflow: hidden;
 
   .arrow-left {
     position: absolute;
-    top: 40%;
+    top: 18vw;
+    left: 3%;
     cursor: pointer;
   }
   .arrow-right {
     position: absolute;
-    top: 40%;
-    left: 99.2%;
+    top: 18vw;
+    left: 96.5%;
     cursor: pointer;
   }
 }
 .slider {
-  width: 98%;
-  height: 85vh;
+  width: 80vw;
+  height: 55vw;
   margin: auto;
   overflow: hidden;
 }
@@ -36,17 +37,12 @@
 .slider .figure {
   position: relative;
   width: 900%;
-  height: 35rem;
+  height: 35vw;
   margin: 0;
   left: 0;
   animation: 40s slider infinite;
 }
 
-/* .slider .figure div {
-  float: left;
-  width: 11.1111111111111%;
-}
- */
 @keyframes slider {
   0% {
     left: 0;
@@ -107,7 +103,7 @@
 .slider .fixed-slide {
   position: relative;
   width: 900%;
-  height: 35rem;
+  height: 35vw;
   margin: 0;
 
   animation: 0.3s slider-2 ease-in-out;
@@ -150,61 +146,7 @@
   left: -700%;
 }
 
-/* @keyframes slider-2 {
-  0% {
-    left: 0;
-  }
-  12% {
-    left: 0;
-  }
-  12.5% {
-    left: -100%;
-  }
-  24.5% {
-    left: -100%;
-  }
-  25% {
-    left: -200%;
-  }
-  37% {
-    left: -200%;
-  }
-  37.5% {
-    left: -300%;
-  }
-  49.5% {
-    left: -300%;
-  }
-  50% {
-    left: -400%;
-  }
-  62% {
-    left: -400%;
-  }
-  62.5% {
-    left: -500%;
-  }
-  74.5% {
-    left: -500%;
-  }
-  75% {
-    left: -600%;
-  }
-  87% {
-    left: -600%;
-  }
-  87.5% {
-    left: -700%;
-  }
-  99.5% {
-    left: -700%;
-  }
-  100% {
-    left: -800%;
-  }
-} */
-
-.slider1 {
+/* .slider1 {
   overflow: hidden;
   position: relative;
   width: 900%;
@@ -213,33 +155,48 @@
   left: 0;
   z-index: -200;
   animation: 40s slider infinite;
-}
+} */
 .par {
   position: absolute;
-  top: 100%;
+  top: 120%;
+  .btn {
+    border: 1px solid black;
+    border-radius: 3vw;
+    padding: 1vw;
+    text-align: center;
+    font-size: 1.2vw;
+    font-family: "Bigelow Rules";
+  }
+
+  .btn-large {
+    width: 15vw;
+  }
 }
 .par1 {
-  font-size: 1.2rem;
+  font-size: 1.2vw;
 }
 .par2 {
   font-family: "Comfortaa";
-  font-size: 2rem;
-  margin-top: 0;
-  margin-bottom: 0.7rem;
+  font-size: 2vw;
+  margin-top: 0.1vw;
+  margin-bottom: 0.7vw;
 }
 
 .control-group {
   position: absolute;
-  width: 162px;
+  /* width: 162px; */
+  width: 10vw;
   display: flex;
   justify-content: space-around;
-  left: 75%;
+  left: 80%;
 
-  top: 76%;
+  top: 63%;
 }
 .control-item {
-  width: 14px;
-  height: 14px;
+  width: 1vw;
+  height: 1vw;
+  /* width: 14px;
+  height: 14px; */
   cursor: pointer;
   /* transition: 0.5s; */
   border: 1px solid black;
@@ -247,42 +204,44 @@
   /* background-color: navajowhite; */
 }
 .active-item-chosen-1 {
-  left: 4%;
+  left: 4.5%;
 }
 .active-item-chosen-2 {
-  left: 16.5%;
+  left: 17%;
 }
 .active-item-chosen-3 {
-  left: 29%;
+  left: 29.5%;
 }
 .active-item-chosen-4 {
-  left: 41.5%;
+  left: 42%;
 }
 .active-item-chosen-5 {
-  left: 54%;
+  left: 54.5%;
 }
 .active-item-chosen-6 {
-  left: 66.5%;
+  left: 67%;
 }
 .active-item-chosen-7 {
-  left: 79%;
+  left: 79.5%;
 }
 .active-item-chosen-8 {
-  left: 91.5%;
+  left: 92%;
 }
 .active-item {
   position: absolute;
-  width: 6px;
-  height: 6px;
+  width: 0.35vw;
+  height: 0.35vw;
+
+  /* background-color: red; */
   background-color: black;
   border-radius: 50%;
   top: 32%;
 }
 .active-item-1 {
-  left: 4%;
+  left: 4.5%;
 }
 .active-item-2 {
-  left: 16.5%;
+  left: 17%;
 }
 .active-item-3 {
   left: 29%;
@@ -297,10 +256,10 @@
   left: 66.5%;
 }
 .active-item-7 {
-  left: 79%;
+  left: 79.5%;
 }
 .active-item-8 {
-  left: 91.5%;
+  left: 92%;
 }
 .active-item-moving {
   left: 4.5%;
@@ -310,10 +269,10 @@
   background-color: lightgray;
 }
 .control-item-active {
-  width: 10px;
-  height: 10px;
+  width: 0.5vw;
+  height: 0.5vw;
   cursor: pointer;
-  border: 1px solid black;
+  border: 0.5px solid black;
   border-radius: 50%;
   background-color: black;
   animation: 40s animation-control-items infinite;
@@ -378,10 +337,10 @@
   }
 }
 .control-item-chosen {
-  width: 7px;
-  height: 7px;
+  width: 0.7vw;
+  height: 0.7vw;
   cursor: pointer;
-  border: 1px solid black;
+  border: 0.5px solid black;
   border-radius: 50%;
   background-color: black;
 
@@ -389,87 +348,6 @@
   left: 3.2%;
   top: 23%;
 }
-.container-one-slide {
-  margin: 2% auto;
-  margin-top: 5%;
-  overflow: hidden;
-
-  .arrow-left {
-    position: absolute;
-    top: 40%;
-    cursor: pointer;
-  }
-  .arrow-right {
-    position: absolute;
-    top: 40%;
-    left: 99.2%;
-    cursor: pointer;
-  }
-  .slide {
-    width: 98%;
-    margin: auto;
-    overflow: hidden;
-  }
-
-  .fig-sl {
-    position: relative;
-
-    height: 35rem;
-    width: 100%;
-    /* z-index: -2; */
-    /* margin: 0;
-  left: 0; */
-  }
-  .slide1 {
-    overflow: hidden;
-    position: relative;
-    margin: 0;
-    margin-top: 20px;
-    left: 0;
-  }
-  .sl-par {
-    /* float: left;
-    width: 11.1111111111111%; */
-    height: 100%;
-    background: white;
-  }
-  .sl-par1 {
-    font-size: 1.2rem;
-  }
-  .sl-par2 {
-    font-family: "Comfortaa";
-    font-size: 2rem;
-    margin-top: 0;
-    margin-bottom: 0.7rem;
-  }
-}
-
-/* 
-#c1:checked ~ .pc1 {
-  margin-left: 0;
-}
-#c2:checked ~ .pc1 {
-  margin-left: -12.5%;
-}
-#c3:checked ~ .pc1 {
-  margin-left: -25%;
-}
-#c4:checked ~ .pc1 {
-  margin-left: -37.5%;
-}
-#c5:checked ~ .pc1 {
-  margin-left: -50%;
-}
-#c6:checked ~ .pc1 {
-  margin-left: -62.5%;
-}
-#c7:checked ~ .pc1 {
-  margin-left: -75%;
-}
-#c8:checked ~ .pc1 {
-  margin-left: -87.5%;
-}
- */
 
 .fixed-radio {
   position: relative;
@@ -505,49 +383,65 @@
     transform: translateX(0%);
   }
   12.5% {
-    transform: translateX(335%);
+    transform: translateX(1.25vw);
   }
   24.99% {
-    transform: translateX(335%);
+    transform: translateX(1.25vw);
   }
   25% {
-    transform: translateX(670%);
+    transform: translateX(2.5vw);
   }
   37.49% {
-    transform: translateX(670%);
+    transform: translateX(2.5vw);
   }
   37.5% {
-    transform: translateX(1005%);
+    transform: translateX(3.75vw);
   }
   49.99% {
-    transform: translateX(1005%);
+    transform: translateX(3.75vw);
   }
   50% {
-    transform: translateX(1340%);
+    transform: translateX(5vw);
   }
   62.49% {
-    transform: translateX(1340%);
+    transform: translateX(5vw);
   }
   62.5% {
-    transform: translateX(1675%);
+    transform: translateX(6.25vw);
   }
   74.99% {
-    transform: translateX(1675%);
+    transform: translateX(6.25vw);
   }
   75% {
-    transform: translateX(2010%);
+    transform: translateX(7.5vw);
   }
   87.49% {
-    transform: translateX(2010%);
+    transform: translateX(7.5vw);
   }
   87.5% {
-    transform: translateX(2345%);
+    transform: translateX(8.75vw);
   }
   99.99% {
-    transform: translateX(2345%);
+    transform: translateX(8.75vw);
   }
 
   100% {
-    transform: translateX(2680%);
+    transform: translateX(10vw);
+  }
+}
+@media (max-width: 768px) {
+  .slider {
+    width: 95vw;
+    height: 60vw;
+  }
+
+  .background-image-sl {
+    height: 140%;
+  }
+  .par {
+    top: 140%;
+  }
+  .control-group {
+    top: 75%;
   }
 }
