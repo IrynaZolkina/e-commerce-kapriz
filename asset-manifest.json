@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/e-commerce-kapriz/static/css/main.ce3f5280.chunk.css",
-    "main.js": "/e-commerce-kapriz/static/js/main.9d3a643c.chunk.js",
-    "main.js.map": "/e-commerce-kapriz/static/js/main.9d3a643c.chunk.js.map",
+    "main.css": "/e-commerce-kapriz/static/css/main.6e8f1eec.chunk.css",
+    "main.js": "/e-commerce-kapriz/static/js/main.fec46a08.chunk.js",
+    "main.js.map": "/e-commerce-kapriz/static/js/main.fec46a08.chunk.js.map",
     "runtime-main.js": "/e-commerce-kapriz/static/js/runtime-main.e4247ec7.js",
     "runtime-main.js.map": "/e-commerce-kapriz/static/js/runtime-main.e4247ec7.js.map",
     "static/js/2.9e3dd140.chunk.js": "/e-commerce-kapriz/static/js/2.9e3dd140.chunk.js",
     "static/js/2.9e3dd140.chunk.js.map": "/e-commerce-kapriz/static/js/2.9e3dd140.chunk.js.map",
     "index.html": "/e-commerce-kapriz/index.html",
-    "precache-manifest.fc6278c293a149e6b81afbb449f44c7f.js": "/e-commerce-kapriz/precache-manifest.fc6278c293a149e6b81afbb449f44c7f.js",
+    "precache-manifest.800fc719e54a1602d48abe77705fc27f.js": "/e-commerce-kapriz/precache-manifest.800fc719e54a1602d48abe77705fc27f.js",
     "service-worker.js": "/e-commerce-kapriz/service-worker.js",
-    "static/css/main.ce3f5280.chunk.css.map": "/e-commerce-kapriz/static/css/main.ce3f5280.chunk.css.map",
+    "static/css/main.6e8f1eec.chunk.css.map": "/e-commerce-kapriz/static/css/main.6e8f1eec.chunk.css.map",
     "static/js/2.9e3dd140.chunk.js.LICENSE.txt": "/e-commerce-kapriz/static/js/2.9e3dd140.chunk.js.LICENSE.txt",
     "static/media/shopping-bag.30f07071.svg": "/e-commerce-kapriz/static/media/shopping-bag.30f07071.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.e4247ec7.js",
     "static/js/2.9e3dd140.chunk.js",
-    "static/css/main.ce3f5280.chunk.css",
-    "static/js/main.9d3a643c.chunk.js"
+    "static/css/main.6e8f1eec.chunk.css",
+    "static/js/main.fec46a08.chunk.js"
   ]
 }

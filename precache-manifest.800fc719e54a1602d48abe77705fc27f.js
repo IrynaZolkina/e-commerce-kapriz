@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b8207db708aa82b24c625796ffca3a02",
+    "revision": "76b4bdc902c4d5b2891a8f37ed48ee9b",
     "url": "/e-commerce-kapriz/index.html"
   },
   {
-    "revision": "4b180bdba70e8824e849",
-    "url": "/e-commerce-kapriz/static/css/main.ce3f5280.chunk.css"
+    "revision": "2cca67f2f973527fdda3",
+    "url": "/e-commerce-kapriz/static/css/main.6e8f1eec.chunk.css"
   },
   {
     "revision": "5689ddd9a5de3263a931",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/e-commerce-kapriz/static/js/2.9e3dd140.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4b180bdba70e8824e849",
-    "url": "/e-commerce-kapriz/static/js/main.9d3a643c.chunk.js"
+    "revision": "2cca67f2f973527fdda3",
+    "url": "/e-commerce-kapriz/static/js/main.fec46a08.chunk.js"
   },
   {
     "revision": "7faf5e59772c43c970da",
