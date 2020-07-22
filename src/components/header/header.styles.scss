@@ -18,7 +18,7 @@
     background-position: center;
     background-size: cover;
     width: 4vw;
-    height: 5vw;
+    height: 4vw;
     /* padding-left: 5%; 
     margin-left: 14vw;*/
     margin-top: 0.8vw;
@@ -28,6 +28,7 @@
     /*  left: 50%;
     transform: translateX(-50%); */
     z-index: 10;
+    line-height: 4vw;
 
     /* top: -1.6vh; */
     a {
@@ -35,7 +36,8 @@
       font-family: "Cormorant Infant", serif;
       color: black;
       padding: 0;
-      margin: -1vw;
+      margin: 0;
+      /* margin: -1vw; */
       span {
         font-size: 5.3vw;
       }
