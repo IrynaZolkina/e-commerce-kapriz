@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/e-commerce-kapriz/static/css/main.d4efe47d.chunk.css",
+    "main.css": "/e-commerce-kapriz/static/css/main.91012b06.chunk.css",
     "main.js": "/e-commerce-kapriz/static/js/main.1a7be21f.chunk.js",
     "main.js.map": "/e-commerce-kapriz/static/js/main.1a7be21f.chunk.js.map",
     "runtime-main.js": "/e-commerce-kapriz/static/js/runtime-main.e4247ec7.js",
@@ -8,16 +8,16 @@
     "static/js/2.a3c2e8b0.chunk.js": "/e-commerce-kapriz/static/js/2.a3c2e8b0.chunk.js",
     "static/js/2.a3c2e8b0.chunk.js.map": "/e-commerce-kapriz/static/js/2.a3c2e8b0.chunk.js.map",
     "index.html": "/e-commerce-kapriz/index.html",
-    "precache-manifest.fd2e9650b061c4d35e692d2642f1b670.js": "/e-commerce-kapriz/precache-manifest.fd2e9650b061c4d35e692d2642f1b670.js",
+    "precache-manifest.4f0cca5ee4315491ce8f9df2941ee734.js": "/e-commerce-kapriz/precache-manifest.4f0cca5ee4315491ce8f9df2941ee734.js",
     "service-worker.js": "/e-commerce-kapriz/service-worker.js",
-    "static/css/main.d4efe47d.chunk.css.map": "/e-commerce-kapriz/static/css/main.d4efe47d.chunk.css.map",
+    "static/css/main.91012b06.chunk.css.map": "/e-commerce-kapriz/static/css/main.91012b06.chunk.css.map",
     "static/js/2.a3c2e8b0.chunk.js.LICENSE.txt": "/e-commerce-kapriz/static/js/2.a3c2e8b0.chunk.js.LICENSE.txt",
     "static/media/shopping-bag.30f07071.svg": "/e-commerce-kapriz/static/media/shopping-bag.30f07071.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.e4247ec7.js",
     "static/js/2.a3c2e8b0.chunk.js",
-    "static/css/main.d4efe47d.chunk.css",
+    "static/css/main.91012b06.chunk.css",
     "static/js/main.1a7be21f.chunk.js"
   ]
 }
