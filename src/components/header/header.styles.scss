@@ -58,3 +58,32 @@
     }
   }
 }
+@media (max-width: 515px) {
+  .header {
+    height: 1vh;
+    /*width: 100%;
+    display: grid;
+    
+    justify-items: end; */
+    grid-template-columns: 13% 55% 32%;
+    .main-title {
+      /* position: absolute; */
+      /*  left: 50%;
+  transform: translateX(-50%);font-size: 50px; */
+      z-index: 10;
+      line-height: 4vh;
+
+      /* top: -1.6vh; */
+      a {
+        font-size: 5vh;
+
+        span {
+          font-size: 4.5vh;
+        }
+      }
+    }
+    .logo-kapriz {
+      display: none;
+    }
+  }
+}

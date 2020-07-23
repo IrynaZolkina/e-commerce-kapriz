@@ -5,6 +5,27 @@ import "./sn.scss";
 class Sn extends Component {
   render() {
     return (
+      <div>
+        <div className="grid-container">
+          <div className="grid-item item-1">item 1</div>
+          <div className="grid-item item-2">item 2</div>
+          <div className="grid-item item-3">item 3</div>
+          <div className="grid-item item-4">item 4</div>
+          <div className="grid-item item-5">item 5</div>
+        </div>
+      </div>
+    );
+  }
+}
+export default Sn;
+
+/* import React, { Component } from "react";
+
+import "./sn.scss";
+
+class Sn extends Component {
+  render() {
+    return (
       <div className="grid-container">
         <div className="grid-item item-1">item 1</div>
         <div className="grid-item item-2">item 2</div>
@@ -15,7 +36,7 @@ class Sn extends Component {
     );
   }
 }
-export default Sn;
+export default Sn; */
 
 /* 
 

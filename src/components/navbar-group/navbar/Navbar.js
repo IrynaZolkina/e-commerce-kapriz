@@ -2983,7 +2983,7 @@ class Navbar extends Component {
                                                     })
                                                   }
                                                 >
-                                                  {el1.title}ooo---ooo
+                                                  {el1.title.substring(1)}
                                                 </NavLink>
                                               </div>
                                             ) : null}

@@ -92,10 +92,10 @@ class Slider extends Component {
       <div>
         {/* {this.state.slideChosen === 0 ? ( */}
         <div className="container-slider">
-          <div className="arrow-left" onClick={this.stopTimerArrowLeft}>
+          <div className="arrow arrow-left" onClick={this.stopTimerArrowLeft}>
             &#10094;
           </div>
-          <div className="arrow-right" onClick={this.stopTimerArrowRight}>
+          <div className="arrow arrow-right" onClick={this.stopTimerArrowRight}>
             &#10095;
           </div>
           <div className="slider" onClick={this.stopTimer}>
@@ -253,7 +253,7 @@ class Slider extends Component {
             </figure>
           </div>
 
-          <div className="control-group-wrap">
+          <div className="">
             <div className="control-group ">
               <span
                 className="control-item"

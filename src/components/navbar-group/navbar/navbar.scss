@@ -134,9 +134,7 @@ li:hover a::after {
       font-weight: bold;
     }
   }
-  /* .side-menu-sub {
-    margin: -0.4rem 0;
-  } */
+
   .side-menu-arrow {
     cursor: pointer;
     font-size: 1.1rem;
@@ -169,11 +167,9 @@ li:hover a::after {
     margin-left: 20%;
     display: flex;
     flex-direction: column;
-    /*justify-content: space-between; 
-    background-color: rgb(235, 161, 210);*/
   }
   .side-menu-navlink1 {
-    padding: 0.1rem;
+    padding: 0.3rem;
     display: flex;
     justify-content: space-between;
     &:hover {
@@ -184,27 +180,11 @@ li:hover a::after {
   .tab-tab {
     margin-left: 15%;
   }
-  .side-menu-sub-sub1-string {
-    background-color: rgb(243, 225, 122);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  .simple-div {
-    position: relative;
-  }
-  .simple-div2 {
-    position: absolute;
-    background-color: darkorchid;
-  }
 
   .show-side-menu-sub {
     margin-left: 2rem;
     padding: 0.2rem 0;
-
-    /*font-family: "Forum", cursive;*/
     font-family: "Lora", serif;
-
     font-size: 0.8rem;
     display: flex;
     &:hover {
@@ -212,20 +192,7 @@ li:hover a::after {
       font-weight: bold;
     }
   }
-  .show-side-menu-sub-sub {
-    margin-left: 2rem;
-    padding: 0.2rem 0;
-    background-color: green;
-    /*font-family: "Forum", cursive;*/
-    font-family: "Lora", serif;
 
-    font-size: 0.8rem;
-    display: flex;
-    &:hover {
-      cursor: pointer;
-      font-weight: bold;
-    }
-  }
   .close-side-menu-sub {
     display: none;
   }
@@ -281,7 +248,7 @@ li:hover a::after {
     display: none;
   }
 }
-@media (max-width: 580px) {
+@media (max-width: 515px) {
   .rrt {
     width: 90vw;
 
@@ -289,6 +256,24 @@ li:hover a::after {
       left: 90vw;
       width: 10vw;
     }
+  }
+  .toggle-button {
+    /* position: absolute;
+    top: 0.4rem;
+    left: 1rem;
+    display: none; */
+
+    width: 45px;
+    height: 45px; /*
+    border: 2px ridge rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    align-items: center;
+    justify-content: center; */
+  }
+  .bars-title {
+    display: none;
   }
 }
 

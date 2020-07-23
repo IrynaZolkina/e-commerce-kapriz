@@ -2,7 +2,8 @@
   height: 50vh;
   border: 10px solid #14a76c;
   display: grid;
-  grid-template-columns: 200px;
+  grid-template-columns: repeat(auto-fit, 200px);
+  grid-template-rows: repeat(2, 100px);
 }
 .grid-item {
   background-color: #ccc;
