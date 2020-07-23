@@ -2,13 +2,13 @@
 
 .container-slider {
   margin: 5% auto;
-  margin-top: 3%;
+  margin-top: 0.1%;
   overflow: hidden;
 
   .arrow {
     position: absolute;
     cursor: pointer;
-    top: 20vh;
+    top: 18vw;
   }
 
   .arrow-left {
@@ -19,8 +19,8 @@
   }
 }
 .slider {
-  width: 80vh;
-  height: 55vh;
+  width: 80vw;
+  height: 55vw;
   margin: auto;
   overflow: hidden;
 }
@@ -473,6 +473,7 @@
     display: grid;
     grid-template-columns: 30vw;
     justify-content: center;
+
     .btn {
       margin-top: 4vh;
 
