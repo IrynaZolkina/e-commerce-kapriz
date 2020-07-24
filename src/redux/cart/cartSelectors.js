@@ -28,7 +28,7 @@ export const selectCartTotal = createSelector([selectCartItems], (cartItems) =>
       accumalatedQuantity +
       cartItem.quantity *
         (typeof cartItem.price === "string"
-          ? parseInt(cartItem.price)
+          ? parseFloat(cartItem.price)
           : cartItem.price),
     0
   )

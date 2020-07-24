@@ -1,5 +1,6 @@
 .header {
-  height: 4.5vw;
+  /* height: 4.5vw; */
+  height: 25%;
   width: 100%;
   display: grid;
   grid-template-columns: 13% 45% 42%;
@@ -43,7 +44,42 @@
       }
     }
   }
+  /*
+font-family: 'Comfortaa', cursive;
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Cormorant Infant', serif;
+font-family: 'Forum', cursive;
+font-family: 'Lora', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Roboto', sans-serif;
+ font-family: "Alice", serif;
+ font-family: "Literata", serif;
+*/
+  .main-title2 {
+    /* position: absolute; */
+    /*  left: 50%;
+      transform: translateX(-50%); */
+    z-index: 10;
+    line-height: 4vw;
 
+    /* top: -1.6vh; */
+    a {
+      font-size: 3.4vw;
+      font-family: "Alice", serif;
+      letter-spacing: 0.3vw;
+      color: rgba(0, 0, 0, 0.8);
+      text-shadow: 2px 0px 3px rgba(0, 0, 0, 0.2),
+        -1px -0px 0px rgba(0, 0, 0, 0.7);
+      /*text-shadow: 1px 0px 0px red;
+      color: rgb(255, 255, 255);
+       text-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 1),
+        -1.5px -1.5px 1.5px rgba(0, 0, 0, 1); */
+
+      padding: 0;
+      margin: 5px 0 0;
+    }
+  }
   .options {
     /* width: 50%;
     height: 100%; */
@@ -67,19 +103,20 @@
     justify-items: end; */
     grid-template-columns: 13% 55% 32%;
     .main-title {
-      /* position: absolute; */
-      /*  left: 50%;
-  transform: translateX(-50%);font-size: 50px; */
-      z-index: 10;
-      line-height: 4vh;
-
-      /* top: -1.6vh; */
       a {
         font-size: 5vh;
 
         span {
           font-size: 4.5vh;
         }
+      }
+    }
+    .main-title2 {
+      a {
+        font-size: 8vw;
+        font-family: "Alice", serif;
+        letter-spacing: 1vw;
+        color: black;
       }
     }
     .logo-kapriz {

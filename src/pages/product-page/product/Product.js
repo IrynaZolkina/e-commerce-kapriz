@@ -558,9 +558,11 @@ class Product extends Component {
         },
         { merge: true }
       );
-    firestore.collection("items-palitra").doc(this.state.numberCodeTovara).set(
+    firestore.collection("items-palitra").doc(timeId).set(
+      /* firestore.collection("items-palitra").doc(this.state.numberCodeTovara).set( */
       {
         parent: this.props.id,
+        numberCodeTovara: object.numberCodeTovara,
       },
       { merge: true }
     );
@@ -577,11 +579,13 @@ class Product extends Component {
   buttonAddPalitraToCart = (element) => {
     let item = {
       id: element.numberId,
-      price: this.state.discountPrice,
-      name: this.state.title + element.numberTitle,
+      discountPrice: this.state.discountPrice,
+      price: this.state.price,
+      name: this.state.title + " " + element.number + " " + element.numberTitle,
       imageUrl1: element.numberImageUrl,
       codeTovara: element.numberCodeTovara,
     };
+    console.log("buttonAddPalitraToCart---item", { item });
     this.props.addItem(item);
   };
   handleSubmitChangeColorNumber = (index) => {
@@ -601,10 +605,12 @@ class Product extends Component {
     const palitra = [...this.state.palitra];
     let imageName = "";
     let codeTovara = "";
+    let numberId = "";
     const filteredPalitra = palitra.filter((value, ind) => {
       if (ind === index) {
         imageName = value.number;
         codeTovara = value.numberCodeTovara;
+        numberId = value.numberId;
       } else return ind !== index;
     });
 
@@ -621,7 +627,7 @@ class Product extends Component {
         },
         { merge: true }
       );
-    firestore.collection("items-palitra").doc(codeTovara).delete();
+    firestore.collection("items-palitra").doc(numberId).delete();
   };
   handleDiscard = (name) => {
     console.log("title1", name);
@@ -816,8 +822,8 @@ class Product extends Component {
 
     //console.log("hhhhhhhhhh", string1);
     //console.log("hhhhhhhhhhhhhhhhhhhhhhhhh", this.state);
-    console.log("--------item------------", item);
-    console.log("--------arrayDescription-----", arrayDescription);
+    /* console.log("--------item------------", item);
+    console.log("--------arrayDescription-----", arrayDescription); */
     return (
       <div>
         {/* <h1>{id}</h1> */}

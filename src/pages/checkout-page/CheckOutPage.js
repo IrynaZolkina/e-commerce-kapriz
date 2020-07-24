@@ -13,19 +13,22 @@ const CheckOutPage = ({ cartItems, total }) => (
   <div className="checkout-page">
     <div className="checkout-header">
       <div className="header-block">
-        <span>Product</span>
+        <span>Продукт</span>
       </div>
       <div className="header-block">
-        <span>Description</span>
+        <span>Наименование</span>
       </div>
       <div className="header-block">
-        <span>Quantity</span>
+        <span>Код Товара</span>
       </div>
       <div className="header-block">
-        <span>Price</span>
+        <span>Количество</span>
       </div>
       <div className="header-block">
-        <span>Remove</span>
+        <span>Цена</span>
+      </div>
+      <div className="header-block">
+        <span>Удалить</span>
       </div>
     </div>
     {cartItems.map((cartItem) => (
@@ -33,7 +36,7 @@ const CheckOutPage = ({ cartItems, total }) => (
     ))}
 
     <div className="total">
-      <span>TOTAL: ${total}</span>
+      <span>Загальна сума : {total.toFixed(2)}грн.</span>
     </div>
     <div className="test-warning">
       *Please use the following test credit cart for payments*

@@ -225,12 +225,14 @@ class ProductTitleGroup extends Component {
   };
   buttonAddItemToCart = (element) => {
     let item = {
-      id: element.id,
-      price: element.discountPrice,
+      id: this.props.id,
+      discountPrice: element.discountPrice,
+      price: element.price,
       name: element.title,
       imageUrl1: element.imageUrl1,
       codeTovara: element.codeTovara,
     };
+    console.log("buttonAddITEMToCart***item", { item });
     this.props.addItem(item);
   };
   render() {

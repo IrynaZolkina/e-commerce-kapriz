@@ -102,6 +102,18 @@ const CollectionItem = ({ item, addItem }) => {
   const title5 = string555;
   const title6 = string666;
   /* console.log(typeof price, "*************"); */
+  const buttonAddItemToCartFromCollection = (element) => {
+    let item = {
+      id: element.id,
+      discountPrice: element.discountPrice,
+      price: element.price,
+      name: element.title,
+      imageUrl1: element.imageUrl1,
+      codeTovara: element.codeTovara,
+    };
+    console.log("buttonAddITEMToCart***item", { item });
+    addItem(item);
+  };
 
   return (
     <div className="collection-grid-item">
@@ -160,7 +172,11 @@ const CollectionItem = ({ item, addItem }) => {
         </div>
       </NavLink>
       <div className="button-collection-items">
-        <CustomButtonAdopted onClick={() => addItem(item)} inverted>
+        <CustomButtonAdopted
+          /*  onClick={() => addItem(item)} */
+          onClick={() => buttonAddItemToCartFromCollection(item)}
+          inverted
+        >
           В КОШИК
         </CustomButtonAdopted>
       </div>

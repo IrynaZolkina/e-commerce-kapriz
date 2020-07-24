@@ -25,11 +25,12 @@ const Header = ({ currentUser, hidden }) => {
           }}
         ></Link>
       </div>
-      <div className="main-title">
+      {/*<div className="main-title">
         <Link to="/">
           <span>К</span>априз
-        </Link>
-        {/* <Link to="/">КАПРИЗ</Link> */}
+        </Link>*/}
+      <div className="main-title2">
+        <Link to="/">КАПРИЗ</Link>
       </div>
       <div className="options">
         {/* <Link className="option" to="/shop">
@@ -70,9 +71,12 @@ const Header = ({ currentUser, hidden }) => {
         )}
         {hidden ? null : <CartDropdown />}
         {currentUser ? (
-          <div className="options-1">
-            Добро пожаловать, {currentUser.displayName}
-          </div>
+          (console.log("currentUser", { currentUser }),
+          (
+            <div className="options-1">
+              Добро пожаловать, {currentUser.displayName}
+            </div>
+          ))
         ) : (
           <div className="options-1"></div>
         )}

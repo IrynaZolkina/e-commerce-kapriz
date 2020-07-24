@@ -8,7 +8,7 @@
   align-items: center;
 
   .image-container {
-    width: 23%;
+    width: 24%;
     padding-right: 15px;
 
     img {
@@ -16,10 +16,13 @@
       height: 100%;
     }
   }
-  .name,
+  .code-tovara,
   .quantity,
   .price {
-    width: 23%;
+    width: 12%;
+  }
+  .name {
+    width: 32%;
   }
 
   .quantity {
