@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/e-commerce-kapriz/precache-manifest.4f0cca5ee4315491ce8f9df2941ee734.js"
+  "/e-commerce-kapriz/precache-manifest.3818b52a82076df428f532567f76794c.js"
 );
 
 self.addEventListener('message', (event) => {
