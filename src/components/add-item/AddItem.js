@@ -7,8 +7,8 @@ class AddItem extends Component {
   state = {
     item: {
       title: "",
-      price: 0.0,
-      discountPrice: 0.0,
+      price: 0.00,
+      discountPrice: 0.00,
       //brand: "",
       titleCode: "",
       codeTovara: "",

@@ -1527,7 +1527,6 @@ class Navbar extends Component {
               code: "000118",
               number: "05010203",
               last: true,
-              last: true,
             },
             {
               title: "-Демакіяж",

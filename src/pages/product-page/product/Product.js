@@ -11,16 +11,16 @@ import firebase from "../../../firebase/FirebaseUtils";
 //import CollectionList from "../collection-list/CollectionList";
 import Collections from "../../../components/collections/Collections";
 import ProductSmallImage from "../product-small-image/ProductSmallImage";
-import FormInput from "../../../components/form-input/FormInput";
+//import FormInput from "../../../components/form-input/FormInput";
 import FormInputSmall from "../../../components/form-input-small/FormInputSmall";
 import { withRouter } from "react-router-dom";
-import { exists } from "fs";
-import Slider3in8 from "../../../components/slider-3-un-8-sec/Slider3in8";
+//import { exists } from "fs";
+//import Slider3in8 from "../../../components/slider-3-un-8-sec/Slider3in8";
 
 import { connect } from "react-redux";
 import { addItem } from "../../../redux/cart/cartActions";
 import CustomButtonAdopted from "../../../components/custom-button-adopted/CustomButtonAdopted";
-import Slider6in18 from "../../../components/slider-6-un-18-sec/Slider6in18";
+//import Slider6in18 from "../../../components/slider-6-un-18-sec/Slider6in18";
 import ProductTitleGroup from "./ProductTitleGroup";
 //import { storage } from "firebase";
 //import { storage } from "firebase";
@@ -90,6 +90,7 @@ class Product extends Component {
 
   componentDidMount = async () => {
     console.log("pProduct component");
+    window.scrollTo(0, 0);
     firestore
       .collection("navbarTest")
       .orderBy("order", "desc")
@@ -130,88 +131,6 @@ class Product extends Component {
           this.setState({ item: item });
 
           this.setState({ mainImageUrl: item.imageUrl1 });
-
-          /* const title = item.title;
-          const titleCode = item.titleCode;
-          const priceInput = item.price;
-          const discountPriceInput = item.discountPrice;
-          const codeTovaraInput = item.codeTovara;
-          const description = item.description;
-
-          const string11 = titleCode.substring(0, 2);
-          const string111 = title.substring(0, string11);
-
-          const string22 = titleCode.substring(2, 4);
-          const string222 = title.substring(
-            parseInt(string11) + 1,
-            parseInt(string11) + 1 + parseInt(string22)
-          );
-
-          const string33 = titleCode.substring(4, 6);
-          const string333 = title.substring(
-            parseInt(string11) + parseInt(string22) + 2,
-            parseInt(string11) + parseInt(string22) + parseInt(string33) + 2
-          );
-
-          const string44 = titleCode.substring(6, 8);
-          const string444 = title.substring(
-            parseInt(string11) + parseInt(string22) + parseInt(string33) + 3,
-            parseInt(string11) +
-              parseInt(string22) +
-              parseInt(string33) +
-              parseInt(string44) +
-              3
-          );
-
-          const string55 = titleCode.substring(8, 10);
-          const string555 = title.substring(
-            parseInt(string11) +
-              parseInt(string22) +
-              parseInt(string33) +
-              parseInt(string44) +
-              4,
-            parseInt(string11) +
-              parseInt(string22) +
-              parseInt(string33) +
-              parseInt(string44) +
-              parseInt(string55) +
-              4
-          );
-          const string66 = titleCode.substring(10, 12);
-          const string666 = title.substring(
-            parseInt(string11) +
-              parseInt(string22) +
-              parseInt(string33) +
-              parseInt(string44) +
-              parseInt(string55) +
-              5,
-            parseInt(string11) +
-              parseInt(string22) +
-              parseInt(string33) +
-              parseInt(string44) +
-              parseInt(string55) +
-              parseInt(string66) +
-              5
-          );
-
-          this.setState({ title1: string111 });
-          this.setState({ title2: string222 });
-          this.setState({ title3: string333 });
-          this.setState({ title4: string444 });
-          this.setState({ title5: string555 });
-          this.setState({ title6: string666 });
-
-          this.setState({ title1Input: string111 });
-          this.setState({ title2Input: string222 });
-          this.setState({ title3Input: string333 });
-          this.setState({ title4Input: string444 });
-          this.setState({ title5Input: string555 });
-          this.setState({ title6Input: string666 });
-
-          this.setState({ priceInput: priceInput });
-          this.setState({ discountPriceInput: discountPriceInput });
-          this.setState({ codeTovaraInput: codeTovaraInput });
-          this.setState({ descriptionForShow: description }); */
         }
       });
   };
@@ -221,7 +140,7 @@ class Product extends Component {
   };
 
   handleImage = (e) => {
-    const file = e.target.files[0];
+    //const file = e.target.files[0];
     console.log("eeeeeeeeee", e.target.name);
     const name = e.target.name;
     const id = this.props.id;
@@ -269,7 +188,7 @@ class Product extends Component {
   };
 
   handleImageColor = (e) => {
-    const file = e.target.files[0];
+    //const file = e.target.files[0];
     console.log("eeeeeeeeee", e.target.name);
     const name = e.target.name;
     const id = this.props.id;
@@ -483,7 +402,7 @@ class Product extends Component {
     //console.log(name, "***", value);
     console.log(index, "***");
     console.log(this.state.palitra, "***", this.state.palitra[index]);
-    const palitra = [...this.state.palitra];
+    //const palitra = [...this.state.palitra];
     //palitra[index].number = value;
     //this.setState({ palitra: palitra });
   };
@@ -768,17 +687,17 @@ class Product extends Component {
       discountPrice,
       titleCode,
       codeTovara,
-      description,
+      //description,
       arrayDescription,
       arrayApplying,
       arrayContent,
       showArrayDescription,
       showArrayApplying,
       showArrayContent,
-      content,
-      applying,
+      //content,
+      //applying,
       createdAt,
-      shortDescription,
+      //shortDescription,
       collectionsArray,
       imageUrl1,
       imageUrl2,
@@ -792,10 +711,10 @@ class Product extends Component {
       number,
       numberTitle,
       numberCodeTovara,
-      numberImageUrl,
-      temporaryUrl,
+      //numberImageUrl,
+      //temporaryUrl,
       arrayNavbar,
-      title1,
+      /* title1,
       title2,
       title3,
       title4,
@@ -809,10 +728,10 @@ class Product extends Component {
       title6Input,
       priceInput,
       discountPriceInput,
-      codeTovaraInput,
+      codeTovaraInput, */
       mainImageUrl,
       editMode,
-      descriptionForShow,
+      //descriptionForShow,
       inputToArray,
     } = this.state;
 

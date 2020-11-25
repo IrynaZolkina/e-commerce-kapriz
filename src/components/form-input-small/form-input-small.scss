@@ -22,8 +22,8 @@ $main-color: black;
     border: none;
     border-radius: 0;
     border-bottom: 1px solid $sub-color;
-    margin: 2px 0;
-    padding: 5px 2px 3px;
+    margin: 1px 0;
+    padding: 5px 1px 3px;
 
     &:focus {
       outline: none;
@@ -45,8 +45,8 @@ $main-color: black;
     position: absolute;
     pointer-events: none;
     left: 5px;
-    top: 1px;
-    padding-top: 1px;
+    top: 10px;
+    padding-top: 10px;
     transition: 300ms ease all;
 
     &.shrink {

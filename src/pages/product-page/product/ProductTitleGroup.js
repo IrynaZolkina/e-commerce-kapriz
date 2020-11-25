@@ -9,8 +9,8 @@ import { addItem } from "../../../redux/cart/cartActions";
 class ProductTitleGroup extends Component {
   state = {
     title: "",
-    price: 0,
-    discountPrice: 0,
+    price: 0.0,
+    discountPrice: 0.0,
 
     titleCode: "",
     codeTovara: "",
@@ -29,8 +29,8 @@ class ProductTitleGroup extends Component {
     title4Input: "",
     title5Input: "",
     title6Input: "",
-    priceInput: "",
-    discountPriceInput: "",
+    priceInput: 0.0,
+    discountPriceInput: 0.0,
     codeTovaraInput: "",
     shortDescriptionInput: "",
   };
@@ -143,7 +143,7 @@ class ProductTitleGroup extends Component {
   };
   handleChangeStateByName = (event) => {
     const { name, value } = event.target;
-    //console.log(name, "***", value);
+    console.log(name, "***", value, typeof value);
 
     this.setState({ [name]: value });
   };
@@ -271,18 +271,27 @@ class ProductTitleGroup extends Component {
         <div className="title-producer">{title6}</div>
         <div className="title-code-tovara">{codeTovara}</div>
         <div
-          className={`${discountPrice !== 0 ? "line-through" : ""} title-price`}
+          className={`${
+            (discountPrice !== 0) & (discountPrice !== "") ? "line-through" : ""
+          } title-price`}
         >
           {price} грн.
         </div>
-        {discountPrice !== 0 && (
+        {(discountPrice !== 0) & (discountPrice !== "") && (
           <div>
             {" "}
-            {console.log(discountPrice, "discountPrice")}
+            {console.log(
+              discountPrice,
+              "discountPrice",
+              typeof discountPrice,
+              "id-",
+              this.props.id,
+              typeof price
+            )}
             <div className="title-discount-price">{discountPrice} грн.</div>
             <div>
               Знижка-
-              {Math.floor(((price - discountPrice) / discountPrice) * 100)}%
+              {Math.floor(((price - discountPrice) / price) * 100)}%
             </div>
           </div>
         )}

@@ -12,8 +12,8 @@ const HomePage = () => {
       </div>
       {/* <div className="slider3in8-wrap">
         <Slider3in8 sliderName={"топ продажу".toUpperCase()} />
-      </div>
-      <Directory /> */}
+      </div>*/}
+      <Directory />
     </div>
   );
 };

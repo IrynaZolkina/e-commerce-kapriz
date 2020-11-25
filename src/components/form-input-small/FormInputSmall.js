@@ -1,10 +1,15 @@
 import React from "react";
 import "./form-input-small.scss";
 
-const FormInputSmall = ({ handleChange, label, ...otherProps }) => (
+const FormInputSmall = ({ handleChange, label, type, ...otherProps }) => (
   <div className="group">
     {/* {console.log({ ...otherProps }, "...otherprops")} */}
-    <input className="form-input" onChange={handleChange} {...otherProps} />
+    <input
+      className="form-input"
+      type={type}
+      onChange={handleChange}
+      {...otherProps}
+    />
     {label ? (
       <label
         className={`${

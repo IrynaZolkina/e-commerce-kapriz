@@ -23,6 +23,12 @@ import NewProduct from "./components/new-product/NewProduct";
 import Slider6in18 from "./components/slider-6-un-18-sec/Slider6in18";
 
 class App extends Component {
+  /* constructor() {
+    super();
+    this.state = {
+      currentUser: null,
+    };
+  } */
   unsubscribeFromAuth = null;
 
   componentDidMount() {
@@ -55,7 +61,7 @@ class App extends Component {
   componentWillUnmount() {
     this.unsubscribeFromAuth();
   }
-  //my comment
+
   render() {
     return (
       <div>

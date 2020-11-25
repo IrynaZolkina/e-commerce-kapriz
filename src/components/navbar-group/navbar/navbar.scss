@@ -9,8 +9,7 @@
   margin: 0; */
   /* background: white;*/
   width: 85%;
-  margin: 0 auto;
-  /*background-color: lightpink;*/
+  margin: 0 auto; /*background-color: lightpink;*/
 
   /* position: absolute; */
   font-family: "Forum", sans-serif;
@@ -34,18 +33,6 @@
   li {
     display: inline-block;
   }
-
-  /*.side-menu {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    display: none;
-    flex-direction: column;
-    .side-menu .navbar-menu-link {
-      display: block;
-    }
-  }*/
 }
 
 a {
@@ -57,7 +44,6 @@ a {
 
 .navbar-menu-link:hover {
   font-weight: bold;
-  /*cursor: url("./paw.png"), auto;*/
 }
 .navbar-menu-link .hover-border {
   font-size: 0.9vw;
@@ -236,48 +222,6 @@ li:hover a::after {
   }
 }
 
-@media (max-width: 768px) {
-  .toggle-button {
-    display: flex;
-  }
-  .navbar {
-    border: none;
-    padding: 0;
-    margin: 0;
-  }
-  .navbar a {
-    display: none;
-  }
-}
-@media (max-width: 515px) {
-  .rrt {
-    width: 90vw;
-
-    .black-back {
-      left: 90vw;
-      width: 10vw;
-    }
-  }
-  .toggle-button {
-    /* position: absolute;
-    top: 0.4rem;
-    left: 1rem;
-    display: none; */
-
-    width: 45px;
-    height: 45px; /*
-    border: 2px ridge rgba(0, 0, 0, 0.2);
-    border-radius: 50px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    background-color: white;
-    align-items: center;
-    justify-content: center; */
-  }
-  .bars-title {
-    display: none;
-  }
-}
-
 /**********************************/
 .title-category a {
   color: rgba(129, 14, 14, 0.952);
@@ -396,7 +340,7 @@ li:hover .menu-sub {
   margin-top: 0;
 }
 
-/************************************/
+/************  hover-border  ************************/
 .hover-border {
   text-decoration: none;
   position: relative;
@@ -416,4 +360,48 @@ li:hover .menu-sub {
   left: 0%;
   width: 100%;
   background-color: black;
+}
+
+/*****************************************/
+
+@media (max-width: 768px) {
+  .toggle-button {
+    display: flex;
+  }
+  .navbar {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  .navbar a {
+    display: none;
+  }
+}
+@media (max-width: 515px) {
+  .rrt {
+    width: 90vw;
+
+    .black-back {
+      left: 90vw;
+      width: 10vw;
+    }
+  }
+  .toggle-button {
+    /* position: absolute;
+    top: 0.4rem;
+    left: 1rem;
+    display: none; */
+
+    width: 45px;
+    height: 45px; /*
+    border: 2px ridge rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    align-items: center;
+    justify-content: center; */
+  }
+  .bars-title {
+    display: none;
+  }
 }

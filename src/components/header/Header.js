@@ -39,42 +39,45 @@ const Header = ({ currentUser, hidden }) => {
         <Link className="option" to="/collection/items">
           ALL
         </Link>
-
-        {/* {currentUser && currentUser.email === "1234@hotmail.com" && (
-          <Link className="option" to="/new">
-            New Product
-          </Link>
-        )} */}
-        <Link className="option" to="/sn">
+        {/*  <Link className="option" to="/application">
+          For
+        </Link> */}
+        {/*  {currentUser && currentUser.email === "1234@hotmail.com" && ( */}
+        <Link className="option" to="/new">
+          New Product
+        </Link>
+        {/* )} */}
+        {/* <Link className="option" to="/sn">
           SN
         </Link>
-        {/*
+       
         <Link className="option" to="/slidernew">
           SliderNew
         </Link> */}
         {/*  <Link className="option" to="/slider6in18">
           SliderNew
         </Link> */}
-
-        <Link className="option" to="/new">
+        {/*  <Link className="option" to="/new">
           New Product
-        </Link>
-
+        </Link> */}
         {currentUser ? (
           <div className="option" onClick={() => auth.signOut()}>
             SIGN OUT
+            {/* <div className="options-1">
+              {currentUser.displayName} - Добро пожаловать
+            </div> */}
           </div>
         ) : (
           <Link className="option" to="/signin">
             SIGN IN
           </Link>
-        )}
+        )}{" "}
         {hidden ? null : <CartDropdown />}
         {currentUser ? (
-          (console.log("currentUser", { currentUser }),
+          (console.log("currentUser", currentUser.currentUser.email),
           (
             <div className="options-1">
-              Добро пожаловать, {currentUser.displayName}
+              {currentUser.currentUser.displayName} - Добро пожаловать
             </div>
           ))
         ) : (
@@ -91,3 +94,4 @@ const mapStateToProps = createStructuredSelector({
 });
 
 export default connect(mapStateToProps)(Header);
+//export default Header;
