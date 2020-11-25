@@ -5,6 +5,7 @@ import "firebase/storage";
 
 const config = {
   apiKey: "AIzaSyC_W3ZW4MOhN3GurxjEBoXjUd5TCkNXtRc",
+  //apiKey: "AIzaSyADx2k-13JhQVydDsytH93Ff1ApgMME7Pg",
   authDomain: "justclockit-a0fa1.firebaseapp.com",
   databaseURL: "https://justclockit-a0fa1.firebaseio.com",
   projectId: "justclockit-a0fa1",
